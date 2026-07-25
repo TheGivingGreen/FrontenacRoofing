@@ -71,6 +71,10 @@
 .gatewayCard h3 { margin: var(--space-5) 0 var(--space-3); }
 .gatewayCard p { margin-bottom: var(--space-5); max-width: 44ch; }
 .gatewayCard .btn { align-self: flex-start; margin-top: auto; }
+@media (min-width: 900px) {
+  /* Balance the unequal 7/5 columns without flattening the commercial roof. */
+  .gatewayCommercialImage { aspect-ratio: 9 / 8; }
+}
 
 /* ---------- 04. Proof rail ---------- */
 .proof {
