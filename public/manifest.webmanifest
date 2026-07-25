@@ -1,0 +1,18 @@
+{
+  "name": "Frontenac Roofing & Construction",
+  "short_name": "Frontenac Roofing",
+  "description": "Roofing and exterior construction for commercial properties and distinctive homes in Greater St. Louis.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#f3f0e8",
+  "theme_color": "#090a0b",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
