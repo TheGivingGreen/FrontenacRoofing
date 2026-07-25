@@ -46,6 +46,9 @@ export const metadata: Metadata = {
   },
   description:
     "Premium roofing and exterior construction for St. Louis homes and commercial properties, delivered with clear communication and accountable project execution.",
+  manifest: isStagingBuild
+    ? "/FrontenacRoofing/manifest.webmanifest"
+    : "/manifest.webmanifest",
   alternates: { canonical: "./" },
   category: "Roofing and exterior construction",
   openGraph: {
