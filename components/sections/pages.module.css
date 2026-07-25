@@ -1,0 +1,150 @@
+/* ============================================================================
+   Shared inner-page layouts (DESIGN.md §11 components)
+   Editorial light hero, two-column content, card grids, spec grids.
+   ============================================================================ */
+
+/* ---- Editorial page hero ---- */
+.pageHero {
+  padding-top: calc(var(--nav-height-mobile) + var(--space-9));
+  padding-bottom: var(--space-9);
+}
+@media (min-width: 1024px) {
+  .pageHero { padding-top: calc(var(--nav-height-desktop) + var(--space-10)); padding-bottom: var(--space-10); }
+}
+.pageHeroGrid { display: grid; gap: var(--space-7); align-items: center; }
+@media (min-width: 900px) {
+  .pageHeroGrid { grid-template-columns: 7fr 5fr; gap: var(--space-9); }
+  .pageHeroGrid--wide { grid-template-columns: 8fr 4fr; }
+}
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  color: var(--muted);
+  margin-bottom: var(--space-5);
+}
+.breadcrumb a:hover { color: var(--ink); text-decoration: underline; }
+.breadcrumb span[aria-hidden] { color: var(--line-light); }
+.pageHero h1 { margin-bottom: var(--space-5); text-wrap: balance; }
+.pageHero p.lead { max-width: 52ch; }
+.pageHeroActions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-7); }
+
+/* ---- Generic section header ---- */
+.sectionHead { max-width: 720px; margin-bottom: var(--space-8); }
+.sectionHead p { margin-top: var(--space-4); }
+
+/* ---- Two-column feature (alternating) ---- */
+.split { display: grid; gap: var(--space-7); align-items: center; }
+@media (min-width: 900px) {
+  .split { grid-template-columns: 1fr 1fr; gap: var(--space-9); }
+  .split--5-7 { grid-template-columns: 5fr 7fr; }
+  .split--7-5 { grid-template-columns: 7fr 5fr; }
+}
+.split .imageFirst { order: -1; }
+.split h2 { margin-bottom: var(--space-4); }
+.split p + p { margin-top: var(--space-4); }
+.split .btnRow { margin-top: var(--space-6); }
+
+/* ---- Bullet / checklist ---- */
+.checklist { display: flex; flex-direction: column; gap: var(--space-3); margin-top: var(--space-5); }
+.checklist li { display: flex; gap: var(--space-3); align-items: flex-start; color: var(--body); }
+.checklist li svg { flex: 0 0 auto; margin-top: 3px; color: var(--brass-dark); }
+.surface-black .checklist li, .surface-asphalt .checklist li { color: var(--text-dark-body); }
+.surface-black .checklist li svg, .surface-asphalt .checklist li svg { color: var(--brass); }
+
+/* ---- Card grid (services / systems / topics) ---- */
+.cards { display: grid; gap: var(--space-5); }
+@media (min-width: 640px) { .cards--2 { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 900px) { .cards--3 { grid-template-columns: repeat(3, 1fr); } }
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line-light);
+  padding: var(--space-6);
+  background: var(--white);
+}
+.card h3 { margin-bottom: var(--space-3); }
+.card p { margin-bottom: var(--space-4); }
+.card .textlink { margin-top: auto; }
+.surface-paper .card { background: var(--white); }
+
+/* ---- Image card (with caption) ---- */
+.imageCards { display: grid; gap: var(--space-5); }
+@media (min-width: 640px) { .imageCards--2 { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 900px) { .imageCards--3 { grid-template-columns: repeat(3, 1fr); } }
+.imageCard h3 { margin: var(--space-4) 0 var(--space-2); }
+.imageCard .meta { display: flex; gap: var(--space-3); color: var(--muted); margin-bottom: var(--space-2); }
+
+/* ---- Spec / fact grid (dark) ---- */
+.specGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--line-dark);
+  border: 1px solid var(--line-dark);
+}
+@media (min-width: 768px) { .specGrid--4 { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 768px) { .specGrid--3 { grid-template-columns: repeat(3, 1fr); } }
+.specCell { background: var(--asphalt); padding: var(--space-6) var(--space-5); }
+.specCell .value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--text-dark-primary);
+  margin-bottom: var(--space-3);
+}
+.specCell .label { color: var(--brass); }
+
+/* ---- Numbered steps (light) ---- */
+.steps { display: grid; gap: var(--space-6); counter-reset: step; }
+@media (min-width: 768px) { .steps--row { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); } }
+.step { border-top: 2px solid var(--brass); padding-top: var(--space-4); }
+.step .num { font-family: var(--font-display); font-weight: 700; font-size: 13px; letter-spacing: 0.12em; color: var(--brass-dark); margin-bottom: var(--space-3); }
+.step h3 { margin-bottom: var(--space-2); }
+
+/* ---- FAQ ---- */
+.faq { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--line-light); }
+.faqItem { border-bottom: 1px solid var(--line-light); padding: var(--space-6) 0; }
+.faqItem h3 { margin-bottom: var(--space-3); }
+.faqItem p { max-width: 68ch; }
+
+/* ---- Prose (legal / reading) ---- */
+.prose { max-width: var(--container-reading); }
+.prose h2 { margin: var(--space-8) 0 var(--space-3); }
+.prose h3 { margin: var(--space-6) 0 var(--space-2); font-size: 18px; }
+.prose p { margin-bottom: var(--space-4); }
+.prose ul { display: flex; flex-direction: column; gap: var(--space-2); margin-bottom: var(--space-4); padding-left: var(--space-5); list-style: disc; }
+.prose a { color: var(--brass-dark); text-decoration: underline; }
+.prose .updated { color: var(--muted); margin-bottom: var(--space-7); }
+
+/* ---- Contact layout ---- */
+.contactGrid { display: grid; gap: var(--space-8); }
+@media (min-width: 900px) { .contactGrid { grid-template-columns: 5fr 7fr; gap: var(--space-9); } }
+.contactList { display: flex; flex-direction: column; gap: var(--space-5); }
+.contactItem .label { color: var(--muted); display: block; margin-bottom: var(--space-1); }
+.contactItem a, .contactItem span.val { font-family: var(--font-display); font-weight: 650; font-size: 20px; color: var(--ink); }
+
+/* ---- Form (scaffold) ---- */
+.formNote {
+  border: 1px dashed var(--line-light);
+  padding: var(--space-7);
+  background: var(--white);
+}
+.fieldList { display: grid; gap: var(--space-3); margin-top: var(--space-4); }
+@media (min-width: 640px) { .fieldList { grid-template-columns: 1fr 1fr; } }
+.fieldList .full { grid-column: 1 / -1; }
+.field { display: flex; flex-direction: column; gap: var(--space-2); }
+.field label { font-weight: 600; font-size: 13px; color: var(--ink); }
+.field .box {
+  height: 52px;
+  border: 1px solid var(--line-light);
+  background: var(--warm-paper);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-4);
+  color: var(--muted);
+  font-size: 14px;
+}
+.field .box.area { height: 100px; align-items: flex-start; padding-top: var(--space-3); }
