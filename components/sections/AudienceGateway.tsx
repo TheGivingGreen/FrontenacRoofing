@@ -20,9 +20,10 @@ export function AudienceGateway() {
         <div className={styles.gateway}>
           <article className={styles.gatewayCard}>
             <ImageSlot
-              ratio="3-2"
+              ratio="4-3"
               src="/images/home-gateway-commercial.webp"
               label="Commercial project — occupied / flat-roof property"
+              className={styles.gatewayCommercialImage}
             />
             <h3 className="t-title-lg">Roofing decisions backed by documentation.</h3>
             <p className="t-body-lg">
@@ -45,7 +46,7 @@ export function AudienceGateway() {
               Roofing, storm response, specialty systems, and exterior work for
               homes where detail and property protection matter.
             </p>
-            <Button href="/schedule-inspection" variant="secondary">
+            <Button href="/schedule-inspection" variant="primary">
               Schedule an Inspection
             </Button>
           </article>
