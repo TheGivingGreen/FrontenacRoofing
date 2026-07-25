@@ -19,6 +19,9 @@
 
 .heroMedia { position: absolute; inset: 0; z-index: 0; }
 .heroMedia :global(.image-slot) { height: 100%; border: 0; }
+@media (max-width: 767px) {
+  .heroMedia :global(img) { object-position: 62% center !important; }
+}
 /* Directional overlay protecting copy (DESIGN.md §8, 35–60%) */
 .heroOverlay {
   position: absolute;
@@ -40,7 +43,7 @@
 @media (min-width: 1024px) {
   .heroInner { padding-top: var(--nav-height-desktop); }
 }
-.heroCopy { max-width: 640px; }
+.heroCopy { max-width: 760px; }
 .heroTitle { color: var(--white); margin-bottom: var(--space-5); }
 .heroTitle span { display: block; }
 .heroLead { color: var(--text-dark-body); max-width: 46ch; margin-bottom: var(--space-7); }
@@ -230,3 +233,7 @@
 .finalCtaInner h2 { color: var(--text-dark-primary); margin-bottom: var(--space-5); }
 .finalCtaInner p { color: var(--text-dark-body); margin-bottom: var(--space-7); max-width: 46ch; }
 .finalCtaActions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+@media (max-width: 559px) {
+  .heroActions,
+  .finalCtaActions { flex-direction: column; }
+}

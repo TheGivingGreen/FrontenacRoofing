@@ -21,7 +21,13 @@ export function PageHero({
   title: React.ReactNode;
   lead?: React.ReactNode;
   crumbs?: Crumb[];
-  image?: { ratio: "16-9" | "3-2" | "4-3" | "4-5"; label: string; src?: string };
+  image?: {
+    ratio: "16-9" | "3-2" | "4-3" | "4-5";
+    label: string;
+    src?: string;
+    alt?: string;
+    position?: string;
+  };
   actions?: React.ReactNode;
 }) {
   return (
@@ -47,7 +53,14 @@ export function PageHero({
             {actions ? <div className={styles.pageHeroActions}>{actions}</div> : null}
           </div>
           {image ? (
-            <ImageSlot ratio={image.ratio} label={image.label} src={image.src} priority />
+            <ImageSlot
+              ratio={image.ratio}
+              label={image.label}
+              src={image.src}
+              alt={image.alt ?? image.label}
+              position={image.position}
+              priority
+            />
           ) : null}
         </div>
       </div>

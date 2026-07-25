@@ -16,6 +16,8 @@ export function Hero() {
           ratio="21-9"
           priority
           src="/images/home-hero.webp"
+          alt="Completed modern commercial property at dusk"
+          position="center 46%"
           label="Cinematic hero — one exceptional real project"
           note="Strong roof geometry, negative space at left for copy. Dedicated desktop + mobile crops."
         />

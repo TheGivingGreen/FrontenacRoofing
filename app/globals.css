@@ -92,7 +92,8 @@ html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
   /* Anchor offset matches header height (DESIGN.md §9 sticky behavior) */
-  scroll-padding-top: var(--nav-height-desktop);
+  scroll-padding-top: var(--nav-height-mobile);
+  overflow-x: clip;
 }
 
 body {
@@ -104,6 +105,7 @@ body {
   line-height: 1.58;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  overflow-wrap: break-word;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -130,7 +132,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* ============================================================================
    Typography scale (DESIGN.md §5) — mobile-first, desktop via media query
    ============================================================================ */
-.t-display-hero { font-family: var(--font-display); font-weight: 700; font-size: 44px; line-height: 0.98; letter-spacing: -0.025em; }
+.t-display-hero { font-family: var(--font-display); font-weight: 700; font-size: clamp(40px, 11.5vw, 52px); line-height: 0.98; letter-spacing: -0.025em; }
 .t-display-xl   { font-family: var(--font-display); font-weight: 700; font-size: 38px; line-height: 1.00; letter-spacing: -0.02em; }
 .t-display-lg   { font-family: var(--font-display); font-weight: 700; font-size: 34px; line-height: 1.04; letter-spacing: -0.018em; }
 .t-display-md   { font-family: var(--font-display); font-weight: 650; font-size: 28px; line-height: 1.10; letter-spacing: -0.012em; }
@@ -144,8 +146,13 @@ ul { margin: 0; padding: 0; list-style: none; }
 .t-button       { font-family: var(--font-body); font-weight: 650; font-size: 14px; line-height: 1.00; letter-spacing: 0.08em; text-transform: uppercase; }
 .t-caption      { font-family: var(--font-body); font-weight: 500; font-size: 12px; line-height: 1.40; letter-spacing: 0.03em; }
 
+@media (min-width: 768px) {
+  html { scroll-padding-top: var(--nav-height-desktop); }
+  .t-display-hero { font-size: 64px; }
+}
+
 @media (min-width: 1024px) {
-  .t-display-hero { font-size: 76px; }
+  .t-display-hero { font-size: clamp(64px, 5.2vw, 76px); }
   .t-display-xl   { font-size: 60px; }
   .t-display-lg   { font-size: 48px; }
   .t-display-md   { font-size: 36px; }
@@ -234,6 +241,11 @@ ul { margin: 0; padding: 0; list-style: none; }
               color var(--dur-state) var(--ease-signature),
               border-color var(--dur-state) var(--ease-signature);
   min-height: 48px; /* touch target */
+  text-align: center;
+}
+
+@media (max-width: 559px) {
+  .btn { width: 100%; padding-inline: var(--space-4); }
 }
 .btn:disabled,
 .btn[aria-disabled="true"] {
@@ -292,6 +304,7 @@ select:focus-visible {
 .textlink {
   display: inline-flex;
   align-items: center;
+  min-height: 44px;
   gap: var(--space-2);
   color: var(--ink);
   font-family: var(--font-body);

@@ -1,5 +1,13 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Archivo, Instrument_Sans } from "next/font/google";
+import { JsonLd } from "@/components/seo/JsonLd";
+import {
+  absoluteUrl,
+  isStagingBuild,
+  organizationJsonLd,
+  productionOrigin,
+  websiteJsonLd,
+} from "@/lib/seo";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -19,24 +27,64 @@ const instrument = Instrument_Sans({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#090a0b",
+  colorScheme: "light dark",
+};
+
 export const metadata: Metadata = {
-  metadataBase: new URL(`https://${site.domain}`),
+  metadataBase: new URL(productionOrigin),
+  applicationName: site.name,
+  authors: [{ name: site.name, url: productionOrigin }],
+  creator: site.name,
+  publisher: site.name,
   title: {
     default: `${site.name} — Complex roofs. Clear accountability.`,
     template: `%s — ${site.shortName}`,
   },
   description:
     "Premium roofing and exterior construction for St. Louis homes and commercial properties, delivered with clear communication and accountable project execution.",
+  alternates: { canonical: "./" },
+  category: "Roofing and exterior construction",
   openGraph: {
     title: `${site.name}`,
     description:
       "Premium roofing and exterior construction for St. Louis homes and commercial properties.",
-    url: `https://${site.domain}`,
+    url: "./",
     siteName: site.name,
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: absoluteUrl("/images/home-hero.webp"),
+        width: 1536,
+        height: 1024,
+        alt: "Frontenac Roofing & Construction",
+      },
+    ],
   },
-  robots: { index: true, follow: true },
+  twitter: {
+    card: "summary_large_image",
+    title: site.name,
+    description:
+      "Premium roofing and exterior construction for St. Louis homes and commercial properties.",
+    images: [absoluteUrl("/images/home-hero.webp")],
+  },
+  robots: isStagingBuild
+    ? { index: false, follow: false, noarchive: true, nocache: true }
+    : {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          "max-image-preview": "large",
+          "max-snippet": -1,
+          "max-video-preview": -1,
+        },
+      },
 };
 
 export default function RootLayout({
@@ -50,6 +98,8 @@ export default function RootLayout({
         <a className="skip-link" href="#main">
           Skip to main content
         </a>
+        <JsonLd data={organizationJsonLd} />
+        <JsonLd data={websiteJsonLd} />
         {children}
       </body>
     </html>

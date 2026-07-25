@@ -1,7 +1,7 @@
 # Image drop folder
 
 Drop your generated/photographed images here using the **exact filenames** listed
-in `MEDIA_ASSETS.md` (repo root of `frontenacsite/`).
+in `MEDIA_ASSETS.md` at the repository root.
 
 As soon as a correctly named file exists here, it replaces its gray placeholder
 on the site automatically — no code changes needed. Until then, the labeled

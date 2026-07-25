@@ -10,7 +10,7 @@ generation prompt**.
 
 1. Generate/shoot each image below.
 2. Name it **exactly** as listed (lowercase, hyphens, `.webp`).
-3. Drop it into **`frontenacsite/public/images/`**.
+3. Drop it into **`public/images/`**.
 4. Commit + push (GitHub Desktop). The site rebuilds and the image **replaces its
    gray placeholder automatically** — no code changes. Until then, the placeholder
    shows the expected filename so you always know what's missing.
@@ -197,7 +197,7 @@ Reduced-motion users will see the poster still automatically once wired.
 
 ## Summary counts
 
-- **~44 images total.** ~33 are **Category A** (generatable now). ~11 are
-  **Category B** (must be real: project case studies + team portraits).
+- **57 image slots total.** 39 are **Category A** (generatable now). 18 are
+  **Category B** (must be real: project case studies, people, and proof photography).
 - Start with **Category A** to make the whole site feel finished for testing.
 - Swap in **Category B** real photos before you point a real domain at it.
