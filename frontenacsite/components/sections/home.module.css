@@ -1,0 +1,232 @@
+/* ============================================================================
+   Homepage section layouts (HOMEPAGE_WIREFRAME.md §3)
+   Shared by the section components. Grids follow the asymmetric splits in the
+   wireframe (7/5, 5/7, 8/4). Mobile is designed intentionally, not merely
+   stacked (DESIGN.md §17).
+   ============================================================================ */
+
+/* ---------- 02. Hero ---------- */
+.hero {
+  position: relative;
+  min-height: 620px;
+  display: flex;
+  align-items: flex-end;
+  color: var(--white);
+  overflow: hidden;
+}
+@media (min-width: 768px) { .hero { min-height: 760px; } }
+@media (min-width: 1024px) { .hero { min-height: 820px; align-items: center; } }
+
+.heroMedia { position: absolute; inset: 0; z-index: 0; }
+.heroMedia :global(.image-slot) { height: 100%; border: 0; }
+/* Directional overlay protecting copy (DESIGN.md §8, 35–60%) */
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    rgba(9, 10, 11, 0.72) 0%,
+    rgba(9, 10, 11, 0.5) 42%,
+    rgba(9, 10, 11, 0.12) 100%
+  );
+}
+.heroInner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-block: var(--space-9) var(--space-9);
+}
+@media (min-width: 1024px) {
+  .heroInner { padding-top: var(--nav-height-desktop); }
+}
+.heroCopy { max-width: 640px; }
+.heroTitle { color: var(--white); margin-bottom: var(--space-5); }
+.heroTitle span { display: block; }
+.heroLead { color: var(--text-dark-body); max-width: 46ch; margin-bottom: var(--space-7); }
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-7);
+}
+.heroActions .btn { flex: 1 1 auto; }
+@media (min-width: 560px) { .heroActions .btn { flex: 0 0 auto; } }
+.heroLocation { color: var(--brass); }
+
+/* ---------- Generic section header ---------- */
+.head { max-width: 760px; margin-bottom: var(--space-8); }
+.head--wide { max-width: 920px; }
+.headStatement { margin-top: var(--space-2); }
+
+/* ---------- 03. Audience gateway ---------- */
+.gateway { display: grid; gap: var(--space-5); }
+@media (min-width: 900px) {
+  .gateway { grid-template-columns: 7fr 5fr; gap: var(--space-6); }
+}
+.gatewayCard { display: flex; flex-direction: column; }
+.gatewayCard h3 { margin: var(--space-5) 0 var(--space-3); }
+.gatewayCard p { margin-bottom: var(--space-5); max-width: 44ch; }
+.gatewayCard .btn { align-self: flex-start; margin-top: auto; }
+
+/* ---------- 04. Proof rail ---------- */
+.proof {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-top: 1px solid var(--line-light);
+  border-left: 1px solid var(--line-light);
+}
+@media (min-width: 560px) { .proof { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) { .proof { grid-template-columns: repeat(4, 1fr); } }
+.proofCell {
+  padding: var(--space-7) var(--space-6);
+  border-right: 1px solid var(--line-light);
+  border-bottom: 1px solid var(--line-light);
+}
+.proofValue {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: var(--space-3);
+}
+.proofValue small { font-size: 20px; color: var(--muted); }
+.proofLabel { color: var(--muted); }
+.proofCell--pending .proofValue { color: var(--line-light); }
+
+/* ---------- 05 / 06. Capability features ---------- */
+.feature { display: grid; gap: var(--space-6); align-items: center; }
+@media (min-width: 900px) {
+  .feature { gap: var(--space-9); }
+  .feature--commercial { grid-template-columns: 5fr 7fr; }
+  .feature--residential { grid-template-columns: 7fr 5fr; }
+}
+.featureImageFirst { order: -1; }
+.featureCopy h2 { margin-bottom: var(--space-5); }
+.featureCopy p { margin-bottom: var(--space-6); max-width: 48ch; }
+.systemRail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--line-dark);
+  border: 1px solid var(--line-dark);
+  margin-bottom: var(--space-7);
+}
+.systemRail span {
+  background: var(--asphalt);
+  padding: var(--space-4) var(--space-4);
+  color: var(--text-dark-body);
+  font-family: var(--font-body);
+  font-weight: 650;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ---------- 07. Services index ---------- */
+.services { display: grid; gap: var(--space-5); }
+.serviceFeatured {
+  display: grid;
+  gap: var(--space-5);
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .serviceFeatured { grid-template-columns: 7fr 5fr; }
+}
+.serviceGrid { display: grid; gap: var(--space-5); }
+@media (min-width: 700px) { .serviceGrid { grid-template-columns: 1fr 1fr; } }
+.serviceCard { display: flex; flex-direction: column; }
+.serviceCard h3 { margin: var(--space-4) 0 var(--space-2); }
+.serviceCard p { margin-bottom: var(--space-4); max-width: 42ch; }
+.serviceCard .textlink { margin-top: auto; }
+.serviceCardBody { padding-top: var(--space-2); }
+.serviceConditional {
+  border: 1px dashed var(--line-light);
+  padding: var(--space-6);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+  justify-content: space-between;
+}
+
+/* ---------- 08. Process rail ---------- */
+.process { display: grid; gap: 1px; background: var(--line-dark); border: 1px solid var(--line-dark); }
+@media (min-width: 900px) { .process { grid-template-columns: repeat(5, 1fr); } }
+.processStep { background: var(--asphalt); padding: var(--space-7) var(--space-6); }
+.processNum {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  color: var(--brass);
+  margin-bottom: var(--space-4);
+}
+.processStep h3 { color: var(--text-dark-primary); margin-bottom: var(--space-3); }
+.processStep p { color: var(--text-dark-body); }
+
+/* ---------- 09. Featured project ---------- */
+.featured { display: grid; gap: var(--space-7); align-items: start; }
+@media (min-width: 900px) { .featured { grid-template-columns: 7fr 5fr; gap: var(--space-9); } }
+.featuredBlock { margin-bottom: var(--space-5); }
+.featuredBlock h4 { font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brass-dark); margin-bottom: var(--space-2); font-family: var(--font-body); }
+.featuredMeta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--line-light);
+  border: 1px solid var(--line-light);
+  margin-top: var(--space-7);
+}
+@media (min-width: 700px) { .featuredMeta { grid-template-columns: repeat(4, 1fr); } }
+.featuredMetaCell { background: var(--warm-paper); padding: var(--space-5) var(--space-4); }
+.featuredMetaLabel { color: var(--muted); display: block; margin-bottom: var(--space-2); }
+.featuredMetaValue { font-family: var(--font-display); font-weight: 650; font-size: 18px; color: var(--ink); }
+
+/* ---------- 10. Project grid ---------- */
+.projectGrid { display: grid; gap: var(--space-5); }
+@media (min-width: 700px) {
+  .projectGrid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .pg1 { grid-column: span 8; }
+  .pg2 { grid-column: span 4; }
+  .pg3 { grid-column: span 5; }
+  .pg4 { grid-column: span 7; }
+}
+.projectCard { display: block; }
+.projectCard .projectCardBody { padding-top: var(--space-4); }
+.projectCardMeta { display: flex; gap: var(--space-3); color: var(--muted); margin-bottom: var(--space-2); }
+.projectCard h3 { margin: 0; }
+/* Hover tightens crop slightly (DESIGN.md §11 project card) */
+.projectCard :global(.image-slot) :global(img) { transition: transform var(--dur-crop) var(--ease-signature); }
+.projectCard:hover :global(.image-slot) :global(img) { transform: scale(1.025); }
+
+/* ---------- 11. Testimonial ---------- */
+.testimonial { max-width: 900px; }
+.testimonialQuote {
+  font-family: var(--font-display);
+  font-weight: 650;
+  font-size: 26px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: var(--space-6);
+}
+@media (min-width: 1024px) { .testimonialQuote { font-size: 34px; } }
+.testimonialAttr { display: flex; flex-wrap: wrap; gap: var(--space-3); color: var(--muted); }
+.testimonialAttr strong { color: var(--ink); font-weight: 600; }
+
+/* ---------- 12. Service area ---------- */
+.serviceArea { display: grid; gap: var(--space-7); align-items: center; }
+@media (min-width: 900px) { .serviceArea { grid-template-columns: 5fr 7fr; gap: var(--space-9); } }
+.serviceArea p { max-width: 44ch; margin-top: var(--space-4); }
+
+/* ---------- 13. Final CTA ---------- */
+.finalCta { position: relative; overflow: hidden; }
+.finalCtaInner { position: relative; z-index: 2; max-width: 720px; }
+.finalCtaInner h2 { color: var(--text-dark-primary); margin-bottom: var(--space-5); }
+.finalCtaInner p { color: var(--text-dark-body); margin-bottom: var(--space-7); max-width: 46ch; }
+.finalCtaActions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
