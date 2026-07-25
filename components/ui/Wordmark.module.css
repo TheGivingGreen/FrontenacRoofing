@@ -1,6 +1,8 @@
 .wordmark {
   display: inline-flex;
   flex-direction: column;
+  align-items: stretch; /* children fill the primary line's width */
+  width: max-content;   /* block width = width of FRONTENAC */
   line-height: 1;
   color: var(--ink);
 }
@@ -9,30 +11,34 @@
 .primary {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 22px;
+  font-size: 25px;
   letter-spacing: -0.01em;
+  white-space: nowrap; /* FRONTENAC never wraps; it defines the block width */
 }
 
+/* Descriptor stretches to the exact width of FRONTENAC (F-to-C), so the two
+   lines form a flush, equal-width block. */
 .descriptor {
   font-family: var(--font-body);
   font-weight: 650;
   font-size: 9px;
-  letter-spacing: 0.24em;
+  /* Tracked so the descriptor's natural width fills FRONTENAC's width evenly —
+     no justify gaps. text-align-last: justify only snaps the last px flush. */
+  letter-spacing: 0.16em;
   text-transform: uppercase;
+  text-align: justify;
+  text-align-last: justify;
   color: var(--muted);
-  margin-top: 3px;
+  margin-top: 5px;
 }
 .onDark .descriptor { color: var(--brass); }
 
-/* Horizontal treatment keeps descriptor tucked under the primary line; the
-   navigation uses this compact stack. A fully stacked/centered variant is used
-   in the footer and brand-introduction moments (DESIGN.md §3). */
-.stacked {
-  align-items: flex-start;
-}
+/* Stacked variant (footer / brand-introduction) keeps the same equal-width
+   behavior at a larger scale. */
 .stacked .primary { font-size: 34px; }
-.stacked .descriptor { font-size: 11px; letter-spacing: 0.28em; margin-top: 6px; }
+.stacked .descriptor { font-size: 13px; letter-spacing: 0.14em; margin-top: 7px; }
 
 @media (min-width: 1024px) {
-  .primary { font-size: 24px; }
+  .primary { font-size: 36px; }
+  .descriptor { font-size: 14px; letter-spacing: 0.123em; margin-top: 6px; }
 }

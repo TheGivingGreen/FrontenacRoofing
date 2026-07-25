@@ -73,7 +73,7 @@
   --dur-menu: 300ms;
 
   /* --- Nav --- */
-  --nav-height-desktop: 72px;
+  --nav-height-desktop: 80px;
   --nav-height-mobile: 64px;
 
   /* --- Fonts wired via next/font in layout.tsx --- */

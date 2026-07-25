@@ -37,13 +37,11 @@ export function Nav() {
 
   return (
     <header
-      className={`${styles.header} ${scrolled ? styles.scrolled : ""} ${
-        open ? styles.menuOpen : ""
-      }`}
+      className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}
     >
       <div className={`container container--editorial ${styles.bar}`}>
         <Link href="/" className={styles.brand} aria-label={`${site.name} home`}>
-          <Wordmark onDark={!scrolled && !open} />
+          <Wordmark onDark />
         </Link>
 
         <nav className={styles.desktopNav} aria-label="Primary">
@@ -67,7 +65,7 @@ export function Nav() {
             <Phone size={16} strokeWidth={2} aria-hidden="true" />
             <span>{site.phone}</span>
           </a>
-          <Link href="/schedule-inspection" className={`btn btn--primary ${styles.cta}`}>
+          <Link href="/schedule-inspection" className={`btn btn--primary-dark ${styles.cta}`}>
             Schedule an Inspection
           </Link>
           <button

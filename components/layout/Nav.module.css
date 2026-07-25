@@ -5,22 +5,18 @@
   right: 0;
   z-index: 100;
   height: var(--nav-height-mobile);
-  transition: background-color var(--dur-nav) var(--ease-signature),
-              border-color var(--dur-nav) var(--ease-signature);
-  background: transparent;
-  border-bottom: 1px solid transparent;
+  transition: box-shadow var(--dur-nav) var(--ease-signature);
+  /* Permanent solid black bar — never depends on the page behind it. */
+  background: var(--frontenac-black);
+  border-bottom: 1px solid var(--line-dark);
 }
 @media (min-width: 1024px) {
   .header { height: var(--nav-height-desktop); }
 }
 
-/* Solid surface once scrolled (DESIGN.md §9) — 1px rule, no large shadow */
+/* On scroll, add depth beneath the persistent bar. */
 .scrolled {
-  background: var(--warm-paper);
-  border-bottom-color: var(--line-light);
-}
-.menuOpen {
-  background: var(--warm-paper);
+  box-shadow: 0 10px 30px -18px rgba(0, 0, 0, 0.85);
 }
 
 .bar {
@@ -45,16 +41,20 @@
 }
 .link {
   font-family: var(--font-body);
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--ink);
-  padding-bottom: 2px;
-  border-bottom: 1px solid transparent;
-  transition: border-color var(--dur-state) var(--ease-signature);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--white);
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: border-color var(--dur-state) var(--ease-signature),
+              color var(--dur-state) var(--ease-signature);
 }
-.link:hover { border-bottom-color: currentColor; }
-/* Over-hero (unscrolled) state: white text */
-.header:not(.scrolled):not(.menuOpen) .link { color: var(--white); }
+.link:hover,
+.link:focus-visible {
+  border-bottom-color: var(--brass);
+  color: var(--brass-light);
+}
 
 .actions {
   display: flex;
@@ -70,9 +70,9 @@
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.02em;
-  color: var(--ink);
+  color: var(--white);
 }
-.header:not(.scrolled):not(.menuOpen) .phone { color: var(--white); }
+.phone:hover { color: var(--brass-light); }
 @media (min-width: 1280px) {
   .phone { display: inline-flex; }
 }
@@ -90,10 +90,9 @@
   height: 48px;
   background: transparent;
   border: 0;
-  color: var(--ink);
+  color: var(--white);
   cursor: pointer;
 }
-.header:not(.scrolled):not(.menuOpen) .menuButton { color: var(--white); }
 @media (min-width: 1024px) {
   .menuButton { display: none; }
 }
