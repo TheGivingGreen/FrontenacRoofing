@@ -22,6 +22,7 @@ export function ImageSlot({
   note,
   src,
   alt,
+  position = "center",
   className = "",
   priority = false,
 }: {
@@ -30,6 +31,7 @@ export function ImageSlot({
   note?: string;
   src?: string;
   alt?: string;
+  position?: string;
   className?: string;
   priority?: boolean;
 }) {
@@ -49,6 +51,7 @@ export function ImageSlot({
             width: "100%",
             height: "100%",
             objectFit: "cover",
+            objectPosition: position,
             position: "relative",
             zIndex: 1,
           }}

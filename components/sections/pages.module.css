@@ -23,11 +23,19 @@
   color: var(--muted);
   margin-bottom: var(--space-5);
 }
+.breadcrumb a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
 .breadcrumb a:hover { color: var(--ink); text-decoration: underline; }
 .breadcrumb span[aria-hidden] { color: var(--line-light); }
 .pageHero h1 { margin-bottom: var(--space-5); text-wrap: balance; }
 .pageHero p.lead { max-width: 52ch; }
 .pageHeroActions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-7); }
+@media (max-width: 559px) {
+  .pageHeroActions { flex-direction: column; }
+}
 
 /* ---- Generic section header ---- */
 .sectionHead { max-width: 720px; margin-bottom: var(--space-8); }
@@ -125,12 +133,16 @@
 .contactList { display: flex; flex-direction: column; gap: var(--space-5); }
 .contactItem .label { color: var(--muted); display: block; margin-bottom: var(--space-1); }
 .contactItem a, .contactItem span.val { font-family: var(--font-display); font-weight: 650; font-size: 20px; color: var(--ink); }
+.contactItem a { display: inline-flex; align-items: center; min-height: 44px; }
 
 /* ---- Form (scaffold) ---- */
 .formNote {
   border: 1px dashed var(--line-light);
   padding: var(--space-7);
   background: var(--white);
+}
+@media (max-width: 479px) {
+  .formNote { padding: var(--space-5); }
 }
 .fieldList { display: grid; gap: var(--space-3); margin-top: var(--space-4); }
 @media (min-width: 640px) { .fieldList { grid-template-columns: 1fr 1fr; } }

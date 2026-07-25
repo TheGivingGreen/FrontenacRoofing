@@ -1,8 +1,7 @@
 # Frontenac Roofing & Construction — Website
 
-Marketing site for Frontenac Roofing & Construction, built to the visual system
-in `DESIGN.md`, the content rules in `PROJECT_BRIEF.md`, and the layout in
-`HOMEPAGE_WIREFRAME.md`.
+Marketing site for Frontenac Roofing & Construction, built to the project’s
+editorial visual system, content guardrails, and conversion-led wireframe.
 
 > **Brand note:** the design and wireframe source documents were drafted under a
 > placeholder codename ("Warson"). This build uses the confirmed brand,
@@ -24,6 +23,10 @@ npm run dev     # http://localhost:3000
 npm run build   # production build
 npm run start   # serve the production build
 ```
+
+GitHub Pages is a no-index staging environment. The production-domain build
+emits indexable metadata, canonical URLs, structured data, `robots.txt`,
+`sitemap.xml`, and an AI-readable `llms.txt`.
 
 ## What's built
 
