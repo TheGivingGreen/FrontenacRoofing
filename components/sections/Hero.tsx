@@ -29,8 +29,8 @@ export function Hero() {
             Commercial + Residential Roofing
           </span>
           <h1 id="hero-title" className={`t-display-hero ${styles.heroTitle}`}>
-            <span>Complex roofs.</span>
-            <span>Clear accountability.</span>
+            <span>The quality</span>
+            <span>your property deserves.</span>
           </h1>
           <p className={`t-lead ${styles.heroLead}`}>
             {site.name} brings {site.teamExperienceYears} years of combined

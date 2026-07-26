@@ -1,9 +1,12 @@
+import Image from "next/image";
 import styles from "./Wordmark.module.css";
+import { asset } from "@/lib/asset";
 import { site } from "@/lib/site";
 
 /**
- * Typographic wordmark (DESIGN.md §3). No invented logo/roofline/monogram.
- * "FRONTENAC" dominant, "ROOFING + CONSTRUCTION" as a tracked descriptor.
+ * Official Frontenac logo assets recovered from the legacy company website.
+ * The horizontal lockup keeps the navigation compact; the full mark gives the
+ * footer a stronger brand moment.
  */
 export function Wordmark({
   stacked = false,
@@ -18,9 +21,20 @@ export function Wordmark({
         onDark ? styles.onDark : ""
       }`}
       aria-label={site.name}
+      role="img"
     >
-      <span className={styles.primary}>{site.shortName.toUpperCase()}</span>
-      <span className={styles.descriptor}>Roofing + Construction</span>
+      <Image
+        src={
+          stacked
+            ? asset("/brand/frontenac-logo-full.png")
+            : asset("/brand/frontenac-logo-horizontal.png")
+        }
+        alt=""
+        width={stacked ? 1652 : 1540}
+        height={stacked ? 1019 : 279}
+        className={styles.logo}
+        priority={!stacked}
+      />
     </span>
   );
 }

@@ -3,9 +3,8 @@ import styles from "./home.module.css";
 /**
  * 11. Testimonial / credential proof (HOMEPAGE_WIREFRAME.md §11).
  *
- * GUARDRAIL: legacy testimonials require source + wording + permission
- * verification (PROJECT_BRIEF.md §10). No auto-rotating carousel; one strong
- * quote at a time. Placeholder shown until a review source is confirmed.
+ * Existing testimonial published on the legacy company website. One specific
+ * quote is stronger than an auto-rotating carousel of generic praise.
  */
 export function Testimonial() {
   return (
@@ -14,17 +13,17 @@ export function Testimonial() {
         <span className="eyebrow t-label" id="testimonial-title">
           In their words
         </span>
-        <figure className={`${styles.testimonial} unverified`}>
+        <figure className={styles.testimonial}>
           <blockquote className={styles.testimonialQuote}>
-            &ldquo;[One concise, specific statement about communication,
-            execution, or outcome — verified source and permission required.]&rdquo;
+            &ldquo;We had zero complaints from the tenants at the building,
+            which was a miracle. The communication level was excellent. We
+            always felt that any requests or questions were handled timely and
+            efficiently.&rdquo;
           </blockquote>
           <figcaption className={`t-label ${styles.testimonialAttr}`}>
-            <strong>[Name]</strong>
+            <strong>Charles Kipp</strong>
             <span aria-hidden="true">·</span>
-            <span>[Role or property context]</span>
-            <span aria-hidden="true">·</span>
-            <span>[Source]</span>
+            <span>Client testimonial</span>
           </figcaption>
         </figure>
       </div>

@@ -26,9 +26,15 @@ export const site = {
   // CONFIRM: may move to info@frontenacroofing.com once the new domain is live.
   email: "info@frontenac.construction",
 
-  // UNVERIFIED: PROJECT_BRIEF.md §17 Q1 — 201 Hughes Ln vs 1610 Des Peres Rd.
-  // Left blank intentionally rather than guessing a public address.
-  address: "",
+  // Owner-confirmed public address. Keep the structured fields aligned with
+  // the visible footer/contact copy and Organization JSON-LD.
+  address: {
+    streetAddress: "1610 Des Peres Rd, Suite 150",
+    addressLocality: "Frontenac",
+    addressRegion: "MO",
+    postalCode: "63131",
+    addressCountry: "US",
+  },
 
   // BBB-corroborated management contact (PROJECT_BRIEF.md §4). Do not surface
   // publicly until ownership confirms the correct public leadership contact (§17 Q3).
@@ -48,6 +54,9 @@ export const site = {
   // Owner-confirmed per HOMEPAGE_WIREFRAME.md §02: framed as TEAM experience,
   // never as company age (company began 2018 — PROJECT_BRIEF.md §4).
   teamExperienceYears: 20,
+
+  // Owner-confirmed update to the legacy "500+" completed-project counter.
+  completedProjects: 900,
 } as const;
 
 export type Site = typeof site;

@@ -36,9 +36,14 @@ export default function ContactPage() {
                   <span className={`t-label ${s.label}`}>Email</span>
                   <a href={`mailto:${site.email}`}><Mail size={18} aria-hidden="true" style={{ display: "inline", verticalAlign: "-3px", marginRight: 8 }} />{site.email}</a>
                 </div>
-                <div className={`${s.contactItem} unverified`}>
+                <div className={s.contactItem}>
                   <span className={`t-label ${s.label}`}>Address</span>
-                  <span className="val" style={{ color: "var(--muted)" }}>Public address — pending confirmation</span>
+                  <address className="val" style={{ fontStyle: "normal" }}>
+                    {site.address.streetAddress}
+                    <br />
+                    {site.address.addressLocality}, {site.address.addressRegion}{" "}
+                    {site.address.postalCode}
+                  </address>
                 </div>
                 <div className={s.contactItem}>
                   <span className={`t-label ${s.label}`}>Service area</span>

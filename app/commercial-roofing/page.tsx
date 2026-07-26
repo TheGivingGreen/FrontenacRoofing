@@ -12,7 +12,7 @@ import s from "@/components/sections/pages.module.css";
 export const metadata: Metadata = {
   title: "Commercial Roofing",
   description:
-    "Assessment, repair, replacement, and restoration for commercial and occupied properties in the St. Louis region — backed by documentation and clear communication.",
+    "Commercial roof assessment, repair, replacement, restoration, and coating systems for properties throughout the St. Louis region.",
 };
 
 const SYSTEMS = [
@@ -34,8 +34,8 @@ export default function CommercialRoofingPage() {
       <PageHero
         eyebrow="Commercial Roofing"
         crumbs={[{ label: "Home", href: "/" }, { label: "Commercial" }]}
-        title={<>Roofing decisions backed by documentation.</>}
-        lead="From occupied hotels and multi-unit properties to flat-roof replacement and restoration, Frontenac approaches commercial work through assessment, planning, communication, and closeout."
+        title={<>Commercial roofing built around the property.</>}
+        lead="From occupied hotels and multi-unit properties to flat-roof replacement, restoration, and coating systems, Frontenac brings experienced planning and communication to every phase of the work."
         image={{ ratio: "3-2", label: "Commercial flat-roof project", src: "/images/commercial-hero.webp" }}
         actions={
           <>
@@ -130,7 +130,7 @@ export default function CommercialRoofingPage() {
         <div className="container container--editorial">
           <header className={s.sectionHead}>
             <span className="eyebrow t-label">Recent commercial work</span>
-            <h2 id="cwork-title" className="t-display-md">Proof, not promises.</h2>
+            <h2 id="cwork-title" className="t-display-md">A look at our commercial work.</h2>
           </header>
           <div className={`${s.imageCards} ${s["imageCards--3"]}`}>
             {[1, 2, 3].map((i) => (
