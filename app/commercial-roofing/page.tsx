@@ -6,6 +6,7 @@ import { PageHero } from "@/components/sections/PageHero";
 import { CTABand } from "@/components/sections/CTABand";
 import { Button } from "@/components/ui/Button";
 import { ImageSlot } from "@/components/ui/ImageSlot";
+import { recoveredProjects } from "@/lib/projects";
 import { site } from "@/lib/site";
 import s from "@/components/sections/pages.module.css";
 
@@ -119,7 +120,12 @@ export default function CommercialRoofingPage() {
               </ul>
             </div>
             <div>
-              <ImageSlot ratio="4-3" label="Crew working safely on an occupied commercial building" src="/images/commercial-occupied.webp" />
+              <ImageSlot
+                ratio="4-3"
+                label="Cherry Valley Hotel commercial roof replacement"
+                src="/images/project-01.webp"
+                alt="Aerial view of the Cherry Valley Hotel roofing project in Newark, Ohio"
+              />
             </div>
           </div>
         </div>
@@ -133,16 +139,17 @@ export default function CommercialRoofingPage() {
             <h2 id="cwork-title" className="t-display-md">A look at our commercial work.</h2>
           </header>
           <div className={`${s.imageCards} ${s["imageCards--3"]}`}>
-            {[1, 2, 3].map((i) => (
-              <Link key={i} href="/projects" className={`${s.imageCard} unverified`}>
-                <ImageSlot ratio="4-3" label="Commercial project — approved photo" src={`/images/commercial-project-${i}.webp`} />
-                <h3 className="t-title-md">[Project title]</h3>
-                <div className={`t-label ${s.meta}`}><span>Commercial</span><span aria-hidden="true">·</span><span>[City, ST]</span></div>
+            {recoveredProjects.filter((p) => p.location === "Newark, OH").map((p) => (
+              <Link key={p.id} href="/projects" className={s.imageCard}>
+                <ImageSlot ratio="4-3" label={p.title} src={p.image} alt={p.alt} />
+                <h3 className="t-title-md">{p.title}</h3>
+                <div className={`t-label ${s.meta}`}><span>{p.category}</span><span aria-hidden="true">·</span><span>{p.location}</span></div>
+                <p className={`t-body-sm ${s.projectDescription}`}>{p.description}</p>
               </Link>
             ))}
           </div>
           <p className="t-body-sm" style={{ color: "var(--muted)", marginTop: "var(--space-6)", maxWidth: "60ch" }}>
-            Case studies publish once each project is verified and photography is approved (PROJECT_BRIEF §11). Warranty specifics appear here once the manufacturer, system, and terms are documented.
+            Commercial roof replacement and TPO work at a two-story hotel in Newark, Ohio. Warranty specifics appear here once the manufacturer, system, and terms are documented.
           </p>
         </div>
       </section>

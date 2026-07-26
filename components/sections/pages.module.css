@@ -82,6 +82,64 @@
 @media (min-width: 900px) { .imageCards--3 { grid-template-columns: repeat(3, 1fr); } }
 .imageCard h3 { margin: var(--space-4) 0 var(--space-2); }
 .imageCard .meta { display: flex; gap: var(--space-3); color: var(--muted); margin-bottom: var(--space-2); }
+.projectDescription { color: var(--muted); max-width: 60ch; }
+
+/* ---- Reviews ---- */
+.reviewList {
+  display: grid;
+  gap: var(--space-5);
+}
+@media (min-width: 900px) {
+  .reviewList { grid-template-columns: repeat(12, 1fr); }
+  .reviewCard:nth-child(1) { grid-column: span 7; }
+  .reviewCard:nth-child(2) { grid-column: span 5; }
+  .reviewCard:nth-child(3) { grid-column: 3 / span 8; }
+}
+.reviewCard {
+  display: flex;
+  flex-direction: column;
+  border-top: 3px solid var(--brass);
+  background: var(--warm-paper);
+  padding: var(--space-6);
+}
+@media (min-width: 768px) {
+  .reviewCard { padding: var(--space-7); }
+}
+.reviewStars {
+  display: block;
+  width: 153px;
+  height: auto;
+  margin-bottom: var(--space-5);
+}
+.reviewQuote {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(20px, 2vw, 27px);
+  line-height: 1.38;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-wrap: pretty;
+}
+.reviewAuthor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-3);
+  align-items: baseline;
+  margin-top: auto;
+  padding-top: var(--space-6);
+  font-family: var(--font-body);
+  color: var(--muted);
+}
+.reviewAuthor strong {
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: var(--ink);
+}
+.reviewAuthor span {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
 
 /* ---- Spec / fact grid (dark) ---- */
 .specGrid {

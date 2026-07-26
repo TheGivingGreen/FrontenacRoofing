@@ -1,15 +1,13 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { ImageSlot } from "@/components/ui/ImageSlot";
+import { featuredProject } from "@/lib/projects";
 import styles from "./home.module.css";
 
 /**
  * 09. Featured project (HOMEPAGE_WIREFRAME.md §09).
- *
- * GUARDRAIL: legacy project inventory is a lead, not publish-ready proof
- * (PROJECT_BRIEF.md §11). Every field below is a labeled placeholder until the
- * case study is validated and publication permission is confirmed. Do not
- * publish a client/property name merely because it appeared on the old site.
+ * Photography and facts were recovered from Frontenac's published legacy
+ * project portfolio.
  */
 export function FeaturedProject() {
   return (
@@ -18,46 +16,44 @@ export function FeaturedProject() {
         <span className="eyebrow t-label">Featured Project</span>
         <div className={styles.featured}>
           <div>
-            <ImageSlot ratio="3-2" src="/images/home-featured-project.webp" label="Featured project — approved photography only" />
-            <div className={`${styles.featuredMeta} unverified`}>
+            <ImageSlot
+              ratio="3-2"
+              src={featuredProject.image}
+              alt={featuredProject.alt}
+              position={featuredProject.position}
+              label={featuredProject.title}
+            />
+            <div className={styles.featuredMeta}>
+              <div className={styles.featuredMetaCell}>
+                <span className={`t-label ${styles.featuredMetaLabel}`}>Project type</span>
+                <span className={styles.featuredMetaValue}>Residential</span>
+              </div>
               <div className={styles.featuredMetaCell}>
                 <span className={`t-label ${styles.featuredMetaLabel}`}>System</span>
-                <span className={styles.featuredMetaValue}>[System]</span>
+                <span className={styles.featuredMetaValue}>Camelot shingles</span>
               </div>
               <div className={styles.featuredMetaCell}>
-                <span className={`t-label ${styles.featuredMetaLabel}`}>Approx. sq. ft.</span>
-                <span className={styles.featuredMetaValue}>[00,000]</span>
+                <span className={`t-label ${styles.featuredMetaLabel}`}>Approx. roof area</span>
+                <span className={styles.featuredMetaValue}>8,972 sq. ft.</span>
               </div>
               <div className={styles.featuredMetaCell}>
-                <span className={`t-label ${styles.featuredMetaLabel}`}>Duration</span>
-                <span className={styles.featuredMetaValue}>[Duration]</span>
-              </div>
-              <div className={styles.featuredMetaCell}>
-                <span className={`t-label ${styles.featuredMetaLabel}`}>Constraint</span>
-                <span className={styles.featuredMetaValue}>[Occupancy]</span>
+                <span className={`t-label ${styles.featuredMetaLabel}`}>Location</span>
+                <span className={styles.featuredMetaValue}>Lake St. Louis</span>
               </div>
             </div>
           </div>
 
-          <div className="unverified">
+          <div>
             <h2 id="featured-title" className="t-display-md" style={{ marginBottom: "var(--space-2)" }}>
-              [Verified project title]
+              {featuredProject.title}
             </h2>
             <p className="t-label" style={{ color: "var(--muted)", marginBottom: "var(--space-6)" }}>
-              [City, State] · [Property type]
+              {featuredProject.location} · Residential
             </p>
 
             <div className={styles.featuredBlock}>
-              <h4>The challenge</h4>
-              <p className="t-body">[Short verified problem statement.]</p>
-            </div>
-            <div className={styles.featuredBlock}>
-              <h4>Frontenac&apos;s scope</h4>
-              <p className="t-body">[Short verified system and work scope.]</p>
-            </div>
-            <div className={styles.featuredBlock}>
-              <h4>The outcome</h4>
-              <p className="t-body">[Short verified result.]</p>
+              <h4>Project scope</h4>
+              <p className="t-body">{featuredProject.description}</p>
             </div>
 
             <div style={{ marginTop: "var(--space-6)" }}>

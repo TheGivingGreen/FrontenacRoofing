@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { PageShell } from "@/components/layout/PageShell";
 import { PageHero } from "@/components/sections/PageHero";
 import { CTABand } from "@/components/sections/CTABand";
 import { ImageSlot } from "@/components/ui/ImageSlot";
+import { recoveredProjects } from "@/lib/projects";
 import s from "@/components/sections/pages.module.css";
 
 export const metadata: Metadata = {
@@ -12,18 +12,7 @@ export const metadata: Metadata = {
     "A library of completed commercial and residential roofing and construction projects across the St. Louis region and beyond.",
 };
 
-// Placeholder entries. Each publishes only after the case study is verified and
-// photography + naming permission are confirmed (PROJECT_BRIEF §11).
-const PROJECTS = [
-  { cat: "Commercial", loc: "[City, ST]", ratio: "3-2" as const, img: "/images/project-01.webp" },
-  { cat: "Residential", loc: "[City, ST]", ratio: "4-5" as const, img: "/images/project-02.webp" },
-  { cat: "Specialty", loc: "[City, ST]", ratio: "4-3" as const, img: "/images/project-03.webp" },
-  { cat: "Commercial", loc: "[City, ST]", ratio: "3-2" as const, img: "/images/project-04.webp" },
-  { cat: "Residential", loc: "[City, ST]", ratio: "4-3" as const, img: "/images/project-05.webp" },
-  { cat: "Restoration", loc: "[City, ST]", ratio: "4-5" as const, img: "/images/project-06.webp" },
-];
-
-const FILTERS = ["All", "Commercial", "Residential", "Specialty", "Restoration"];
+const FILTERS = ["All", "Commercial Roofing", "Residential Roofing", "TPO Roofing"];
 
 export default function ProjectsPage() {
   return (
@@ -56,17 +45,24 @@ export default function ProjectsPage() {
           </div>
 
           <div className={`${s.imageCards} ${s["imageCards--3"]}`}>
-            {PROJECTS.map((p, i) => (
-              <Link key={i} href="/projects" className={`${s.imageCard} unverified`}>
-                <ImageSlot ratio={p.ratio} label={`${p.cat} project — approved photo`} src={p.img} />
-                <div className={`t-label ${s.meta}`}><span>{p.cat}</span><span aria-hidden="true">·</span><span>{p.loc}</span></div>
-                <h3 className="t-title-md">[Project title]</h3>
-              </Link>
+            {recoveredProjects.map((p) => (
+              <article key={p.id} className={s.imageCard}>
+                <ImageSlot
+                  ratio={p.ratio}
+                  label={p.title}
+                  src={p.image}
+                  alt={p.alt}
+                  position={p.position}
+                />
+                <div className={`t-label ${s.meta}`}><span>{p.category}</span><span aria-hidden="true">·</span><span>{p.location}</span></div>
+                <h3 className="t-title-md">{p.title}</h3>
+                <p className={`t-body-sm ${s.projectDescription}`}>{p.description}</p>
+              </article>
             ))}
           </div>
 
           <p className="t-body-sm" style={{ color: "var(--muted)", marginTop: "var(--space-7)", maxWidth: "62ch" }}>
-            Filtering by type, system, and location turns on once verified case studies populate the library. No project name or photo is published without confirmation and permission.
+            Commercial and residential roofing work from Frontenac&apos;s portfolio in Missouri and Ohio.
           </p>
         </div>
       </section>
