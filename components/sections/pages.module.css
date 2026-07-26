@@ -82,6 +82,7 @@
 @media (min-width: 900px) { .imageCards--3 { grid-template-columns: repeat(3, 1fr); } }
 .imageCard h3 { margin: var(--space-4) 0 var(--space-2); }
 .imageCard .meta { display: flex; gap: var(--space-3); color: var(--muted); margin-bottom: var(--space-2); }
+.projectDescription { color: var(--muted); max-width: 60ch; }
 
 /* ---- Reviews ---- */
 .reviewList {

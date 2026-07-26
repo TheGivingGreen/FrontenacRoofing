@@ -87,11 +87,8 @@ must be replaced with a real photo before launch.)
 | `home-services-coating.webp` | 4:3 | 1600×1200 | A | Silicone/reflective roof coating being applied to a flat roof, bright reflective surface |
 | `home-services-specialty.webp` | 4:3 | 1600×1200 | A | Close detail of tile, slate, or standing-seam metal roofing, rich material texture |
 | `home-services-siding.webp` | 4:3 | 1600×1200 | A | Fresh fiber-cement or lap siding on a quality home exterior, crisp lines |
-| `home-featured-project.webp` | 3:2 | 1800×1200 | **B** | **Real** featured project photo (approved) |
-| `home-project-01.webp` | 3:2 | 1800×1200 | **B** | **Real** commercial project photo |
-| `home-project-02.webp` | 4:5 | 1200×1500 | **B** | **Real** residential project photo |
-| `home-project-03.webp` | 4:3 | 1600×1200 | **B** | **Real** specialty project photo |
-| `home-project-04.webp` | 3:2 | 1800×1200 | **B** | **Real** commercial project photo |
+| `project-02.webp` | 3:2 / 4:5 crop | 893×670 source | **B · recovered** | Lake St. Louis residential roof replacement; reused as the featured project |
+| `project-01.webp` … `project-04.webp` | mixed | legacy source resolution | **B · recovered** | Four real legacy portfolio photographs reused in the homepage project grid |
 | `home-service-area.webp` | 16:9 | 1920×1080 | A | Aerial/elevated view of a St. Louis-area neighborhood or skyline context (no Arch clichés), roofs visible |
 | `home-cta.webp` | 21:9 | 2520×1080 | A | Moody dusk shot of a finished roof/building, dark enough for white text overlay |
 
@@ -104,9 +101,8 @@ must be replaced with a real photo before launch.)
 | `commercial-hero.webp` | 3:2 | 1800×1200 | A | Large commercial flat-roof building, low-angle, professional and substantial |
 | `commercial-assessment.webp` | 4:3 | 1600×1200 | A | A roofer inspecting and documenting a commercial roof (clipboard/tablet/camera), focused on the work |
 | `commercial-occupied.webp` | 4:3 | 1600×1200 | A | A crew working safely on an occupied commercial building (hotel/multi-unit), safety setup visible, tenants' building intact |
-| `commercial-project-1.webp` | 4:3 | 1600×1200 | **B** | **Real** commercial project |
-| `commercial-project-2.webp` | 4:3 | 1600×1200 | **B** | **Real** commercial project |
-| `commercial-project-3.webp` | 4:3 | 1600×1200 | **B** | **Real** commercial project |
+| `project-01.webp` | 4:3 crop | 875×656 source | **B · recovered** | Cherry Valley Hotel aerial; reused from the verified project library |
+| `project-04.webp` | 4:3 crop | 961×721 source | **B · recovered** | Cherry Valley Hotel TPO installation; reused from the verified project library |
 
 ### Sub-pages
 
@@ -168,7 +164,11 @@ must be replaced with a real photo before launch.)
 
 | Filename | Ratio | Pixels | Cat | Subject prompt |
 |---|---|---|---|---|
-| `project-01.webp` … `project-06.webp` | see below | — | **B** | **Real** project photos (01: 3:2, 02: 4:5, 03: 4:3, 04: 3:2, 05: 4:3, 06: 4:5) |
+| `project-01.webp` | 3:2 crop | 875×656 source | **B · recovered** | Cherry Valley Hotel commercial roof replacement, Newark, Ohio |
+| `project-02.webp` | 4:5 crop | 893×670 source | **B · recovered** | Lake St. Louis residential roof replacement |
+| `project-03.webp` | 4:3 | 854×641 source | **B · recovered** | Eureka residential roof replacement |
+| `project-04.webp` | 3:2 crop | 961×721 source | **B · recovered** | Cherry Valley Hotel TPO replacement, Newark, Ohio |
+| `project-05.webp` `project-06.webp` | 4:3 / 4:5 | — | **B · still needed** | Additional approved real project photography |
 | `about-hero.webp` | 3:2 | 1800×1200 | **B** | **Real** Frontenac crew or a completed project (preferred). AI atmosphere only as temporary placeholder |
 | `team-01.webp` `team-02.webp` `team-03.webp` | 4:5 | 1200×1500 | **B** | **Real** leadership/team portraits — do not AI-generate people |
 | `service-areas.webp` | 4:3 | 1600×1200 | A | Elevated view of a St. Louis-area residential neighborhood, roofs prominent |

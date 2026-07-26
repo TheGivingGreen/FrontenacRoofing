@@ -34,9 +34,9 @@ export function CommercialFeature() {
           <div>
             <ImageSlot
               ratio="4-3"
-              src="/images/home-commercial.webp"
-              label="Commercial flat-roof / restoration system"
-              note="Wide establishing view revealing scope."
+              src="/images/project-04.webp"
+              alt="Crew installing a TPO roofing membrane on the Cherry Valley Hotel project"
+              label="Cherry Valley Hotel TPO replacement"
             />
           </div>
         </div>

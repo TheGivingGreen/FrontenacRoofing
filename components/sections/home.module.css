@@ -207,6 +207,7 @@
 .projectCard .projectCardBody { padding-top: var(--space-4); }
 .projectCardMeta { display: flex; gap: var(--space-3); color: var(--muted); margin-bottom: var(--space-2); }
 .projectCard h3 { margin: 0; }
+.projectCardDescription { color: var(--muted); margin-top: var(--space-3); max-width: 62ch; }
 /* Hover tightens crop slightly (DESIGN.md §11 project card) */
 .projectCard :global(.image-slot) :global(img) { transition: transform var(--dur-crop) var(--ease-signature); }
 .projectCard:hover :global(.image-slot) :global(img) { transform: scale(1.025); }

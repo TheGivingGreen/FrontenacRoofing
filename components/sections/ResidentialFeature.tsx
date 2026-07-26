@@ -14,9 +14,9 @@ export function ResidentialFeature() {
           <div className={styles.featureImageFirst}>
             <ImageSlot
               ratio="3-2"
-              src="/images/home-residential.webp"
-              label="Complex residential roof with architectural context"
-              note="No generic suburban stock home."
+              src="/images/project-03.webp"
+              alt="Residential roof replacement underway in Eureka, Missouri"
+              label="Eureka residential roof replacement"
             />
           </div>
           <div className={styles.featureCopy}>
