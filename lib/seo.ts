@@ -39,6 +39,10 @@ export const organizationJsonLd = {
   url: productionOrigin,
   telephone: site.phoneHref,
   email: site.email,
+  address: {
+    "@type": "PostalAddress",
+    ...site.address,
+  },
   description:
     "Residential and commercial roofing, roof restoration, siding, and exterior construction serving the Greater St. Louis region.",
   areaServed: {
@@ -46,6 +50,7 @@ export const organizationJsonLd = {
     name: site.region,
   },
   sameAs: [site.social.linkedin, site.social.facebook, site.social.instagram],
+  logo: absoluteUrl("/brand/frontenac-logo-full.png"),
   image: absoluteUrl("/images/home-hero.webp"),
   hasOfferCatalog: {
     "@type": "OfferCatalog",

@@ -11,9 +11,9 @@ export function AudienceGateway() {
     <section className="section section--major surface-paper" aria-labelledby="gateway-title">
       <div className="container container--editorial">
         <header className={styles.head}>
-          <span className="eyebrow t-label">One standard. Two distinct needs.</span>
+          <span className="eyebrow t-label">Commercial + Residential Expertise</span>
           <h2 id="gateway-title" className="t-display-lg">
-            The property changes. The expectation does not.
+            Experienced roofing for commercial properties and distinctive homes.
           </h2>
         </header>
 
@@ -25,10 +25,10 @@ export function AudienceGateway() {
               label="Commercial project — occupied / flat-roof property"
               className={styles.gatewayCommercialImage}
             />
-            <h3 className="t-title-lg">Roofing decisions backed by documentation.</h3>
+            <h3 className="t-title-lg">Commercial roofing in experienced hands.</h3>
             <p className="t-body-lg">
-              Assessment, repair, replacement, restoration, and project
-              communication for commercial and occupied properties.
+              Assessment, repair, replacement, restoration, and project communication
+              for commercial, multi-unit, hotel, and occupied properties.
             </p>
             <Button href="/commercial-roofing" variant="primary">
               Discuss a Commercial Project
@@ -41,10 +41,10 @@ export function AudienceGateway() {
               src="/images/home-gateway-residential.webp"
               label="Residential — architecturally distinctive home"
             />
-            <h3 className="t-title-lg">Craftsmanship for homes that demand more than standard.</h3>
+            <h3 className="t-title-lg">Quality craftsmanship for distinctive homes.</h3>
             <p className="t-body-lg">
-              Roofing, storm response, specialty systems, and exterior work for
-              homes where detail and property protection matter.
+              Roofing, storm response, specialty systems, siding, and exterior
+              work completed with close attention to the home and surrounding property.
             </p>
             <Button href="/schedule-inspection" variant="primary">
               Schedule an Inspection

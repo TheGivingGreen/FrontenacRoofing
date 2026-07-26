@@ -19,7 +19,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         crumbs={[{ label: "Home", href: "/" }, { label: "About" }]}
-        title={<>Complex roofs. Clear accountability.</>}
+        title={<>Quality roofing backed by experience.</>}
         lead={`${site.name} is a St. Louis-region roofing and exterior construction company trusted with complex residential and commercial properties.`}
         image={{ ratio: "3-2", label: "Frontenac crew or completed project", src: "/images/about-hero.webp" }}
       />
@@ -35,7 +35,7 @@ export default function AboutPage() {
             Frontenac provides residential and commercial roofing, exterior construction, roof restoration and coating, storm-damage support, siding, and specialty roofing systems across the greater St. Louis region.
           </p>
           <p className="t-body-lg" style={{ marginBottom: "var(--space-4)", color: "var(--body)" }}>
-            The company was established in 2018. Our team brings more than {site.teamExperienceYears} years of combined roofing and construction experience to every property we work on.
+            The company was established in 2018. Our team brings {site.teamExperienceYears} years of combined roofing and construction experience to every property we work on.
           </p>
           <p className="t-body-sm unverified" style={{ color: "var(--muted)", maxWidth: "68ch" }}>
             The full company story — how Frontenac began, leadership, and how we approach estimating, supervision, and closeout — publishes once ownership confirms these details (PROJECT_BRIEF §4, §17).
@@ -48,7 +48,7 @@ export default function AboutPage() {
         <div className="container container--editorial">
           <header className={s.sectionHead}>
             <span className="eyebrow t-label">Leadership</span>
-            <h2 id="lead-title" className="t-display-md">The people accountable for your project.</h2>
+            <h2 id="lead-title" className="t-display-md">The people behind the work.</h2>
           </header>
           <div className={`${s.imageCards} ${s["imageCards--3"]} unverified`}>
             {[1, 2, 3].map((i) => (
@@ -73,7 +73,7 @@ export default function AboutPage() {
         <div className="container container--editorial">
           <header className={s.sectionHead}>
             <span className="eyebrow t-label eyebrow--brass">Credentials</span>
-            <h2 id="cred-title" className="t-display-md">Verified, not claimed.</h2>
+            <h2 id="cred-title" className="t-display-md">Credentials you can verify.</h2>
             <p className="t-body-lg">We publish credentials only once they’re current and documented.</p>
           </header>
           <div className="unverified" style={{ border: "1px dashed var(--line-light)", padding: "var(--space-7)" }}>

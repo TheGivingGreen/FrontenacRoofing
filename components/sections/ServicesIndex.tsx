@@ -11,16 +11,16 @@ import styles from "./home.module.css";
 const SUPPORTING = [
   {
     label: "Residential Roofing",
-    title: "Replacement, repair, and specialty systems.",
-    copy: "Repair, replacement, storm response, and specialty materials for distinctive homes.",
+    title: "Repair, replacement, and specialty roofing.",
+    copy: "Roof repair, replacement, storm response, and specialty systems for distinctive homes.",
     href: "/residential-roofing",
     ratio: "4-3" as const,
     img: "/images/home-services-residential.webp",
   },
   {
     label: "Roof Restoration + Coating",
-    title: "Extend roof life where the system qualifies.",
-    copy: "Silicone and reflective systems with honest candidacy and lifecycle guidance.",
+    title: "Coating systems designed to extend roof life.",
+    copy: "Silicone and reflective restoration systems for roofs that qualify.",
     href: "/commercial-roofing/roof-coating-restoration",
     ratio: "4-3" as const,
     img: "/images/home-services-coating.webp",
@@ -28,15 +28,15 @@ const SUPPORTING = [
   {
     label: "Specialty Roofing",
     title: "Tile, slate, metal, wood shake, and DECRA.",
-    copy: "Complex geometry and premium materials executed cleanly.",
+    copy: "Specialized materials and experienced installation for distinctive roof systems.",
     href: "/residential-roofing/specialty-roofing",
     ratio: "4-3" as const,
     img: "/images/home-services-specialty.webp",
   },
   {
     label: "Siding + Exteriors",
-    title: "Exterior systems that match the roof's standard.",
-    copy: "Siding installation, replacement, and storm-damage repair.",
+    title: "Siding installation, replacement, and repair.",
+    copy: "Exterior improvements and storm-damage repair for residential properties.",
     href: "/siding-exteriors",
     ratio: "4-3" as const,
     img: "/images/home-services-siding.webp",
@@ -50,7 +50,7 @@ export function ServicesIndex() {
         <header className={styles.head}>
           <span className="eyebrow t-label">What we do</span>
           <h2 id="services-title" className="t-display-lg">
-            Services organized around the property.
+            Roofing and exterior services.
           </h2>
         </header>
 
@@ -61,11 +61,11 @@ export function ServicesIndex() {
             <div className={styles.serviceCardBody}>
               <span className="eyebrow t-label">Featured · Commercial Roofing</span>
               <h3 className="t-title-lg" style={{ marginBottom: "var(--space-3)" }}>
-                Occupied-property roofing, assessed and documented.
+                Commercial roofing and restoration.
               </h3>
               <p className="t-body-lg" style={{ marginBottom: "var(--space-4)" }}>
-                Assessment, repair, replacement, and restoration for commercial
-                and multi-unit properties.
+                Repair, replacement, restoration, and coating systems for
+                commercial, multi-unit, and occupied properties.
               </p>
               <span className="textlink">
                 View Commercial Services <ArrowRight size={16} aria-hidden="true" />

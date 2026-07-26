@@ -41,6 +41,8 @@ emits indexable metadata, canonical URLs, structured data, `robots.txt`,
   - `/schedule-inspection` conversion page
 - Reusable primitives: `Wordmark`, `Button`, `ImageSlot`, `PageHero`, `PageShell`,
   `CTABand`, `ServiceDetail`, section components
+- Official transparent Frontenac logo lockups recovered from the legacy
+  company website and used in the navigation and footer
 - **Auto-appearing images:** every image slot is wired to a filename in
   `public/images/`. Drop a correctly named file in and it replaces the placeholder
   automatically — no code change. See **`MEDIA_ASSETS.md`** for every filename,
@@ -57,11 +59,8 @@ explicit `ImageSlot` with a declared aspect ratio — no invented photography.
 
 ### Confirm before launch (from `PROJECT_BRIEF.md §17` / Definition of Ready §19)
 
-- **Public address** — 201 Hughes Ln vs 1610 Des Peres Rd (`site.address` blank)
 - **Email domain** — stays `@frontenac.construction` until the new domain is live
 - **Legacy domain redirects** — map old `frontenac.construction` URLs 1:1
-- **Proof rail** — replace the two pending cells with a verified credential /
-  project count / review score, or collapse to two larger cells
 - **Credentials** — BBB A+, GAF, Owens Corning, James Hardie badge usage
 - **Featured project + project grid** — validate case studies and get publication
   permission before using any client/property name

@@ -15,12 +15,12 @@ export function ServiceArea() {
           <div>
             <span className="eyebrow t-label">Where we work</span>
             <h2 id="area-title" className="t-display-md">
-              St. Louis roots. Property-specific expertise.
+              Serving commercial and residential properties across the St. Louis region.
             </h2>
             <p className="t-body-lg">
-              {site.shortName} serves commercial and residential properties
-              throughout the greater St. Louis region. Confirm your project
-              location with our team.
+              {site.name} serves property owners throughout the greater St.
+              Louis area. Contact our team to confirm availability for your
+              project and location.
             </p>
           </div>
           <ImageSlot

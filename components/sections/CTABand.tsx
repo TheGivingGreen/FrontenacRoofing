@@ -9,8 +9,8 @@ import home from "./home.module.css";
  * and primary action; phone appears as the secondary action. No urgency.
  */
 export function CTABand({
-  headline = "Start with a clear assessment.",
-  body = "Tell us what is happening at your property. We will help determine the appropriate next conversation.",
+  headline = "Put your project in experienced hands.",
+  body = "Tell us what is happening at your property. Our team will help determine the appropriate next step and prepare a plan for the work.",
   primaryLabel = "Schedule an Inspection",
   primaryHref = "/schedule-inspection",
   image,

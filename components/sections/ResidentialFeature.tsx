@@ -22,12 +22,12 @@ export function ResidentialFeature() {
           <div className={styles.featureCopy}>
             <span className="eyebrow t-label">Residential Roofing</span>
             <h2 id="residential-title" className="t-display-md">
-              Built around the home, not just the roof.
+              Craftsmanship worthy of the home.
             </h2>
             <p className="t-body-lg">
-              Frontenac combines careful assessment, appropriate system
-              selection, property protection, and clear communication for
-              replacement, repair, storm damage, and specialty roofing.
+              Frontenac provides roof replacement, repair, storm-damage response,
+              and specialty roofing for homes that require careful material
+              selection, clean execution, and respect for the property.
             </p>
             <Button href="/residential-roofing" variant="secondary">
               View Residential Services

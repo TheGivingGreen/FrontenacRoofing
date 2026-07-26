@@ -6,7 +6,6 @@ import styles from "./Footer.module.css";
 /**
  * Footer (DESIGN.md §11, HOMEPAGE_WIREFRAME.md §14).
  * Confirmed contact only. No newsletter form (no active content owner).
- * Address intentionally omitted until the public address is confirmed (§17 Q1).
  */
 const GROUPS = [
   {
@@ -50,9 +49,8 @@ export function Footer() {
           <div className={styles.brandCol}>
             <Wordmark stacked onDark />
             <p className={`t-body ${styles.positioning}`}>
-              Premium roofing and exterior construction for St. Louis homes and
-              commercial properties, delivered with clear communication and
-              accountable project execution.
+              Quality roofing and exterior construction for commercial
+              properties and distinctive homes throughout the St. Louis region.
             </p>
           </div>
 
@@ -85,7 +83,14 @@ export function Footer() {
                     {site.email}
                   </a>
                 </li>
-                <li className={styles.pending}>Public address — pending confirmation</li>
+                <li>
+                  <address className={styles.address}>
+                    {site.address.streetAddress}
+                    <br />
+                    {site.address.addressLocality}, {site.address.addressRegion}{" "}
+                    {site.address.postalCode}
+                  </address>
+                </li>
                 <li style={{ marginTop: "var(--space-3)" }}>
                   <Link href="/schedule-inspection" className={styles.footerLink}>
                     Schedule an Inspection

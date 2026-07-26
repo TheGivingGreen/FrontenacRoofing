@@ -27,8 +27,8 @@ export default function ResidentialRoofingPage() {
       <PageHero
         eyebrow="Residential Roofing"
         crumbs={[{ label: "Home", href: "/" }, { label: "Residential" }]}
-        title={<>Built around the home, not just the roof.</>}
-        lead="Careful assessment, appropriate system selection, property protection, and clear communication for replacement, repair, storm damage, and specialty roofing."
+        title={<>Craftsmanship worthy of the home.</>}
+        lead="Roof replacement, repair, storm-damage response, and specialty roofing for homes that require careful material selection, clean execution, and respect for the property."
         image={{ ratio: "3-2", label: "Complex residential roof with architectural context", src: "/images/residential-hero.webp" }}
         actions={
           <>
@@ -65,7 +65,7 @@ export default function ResidentialRoofingPage() {
             <div>
               <span className="eyebrow t-label eyebrow--brass">Property protection</span>
               <h2 id="rprotect-title" className="t-display-md">Your property is protected before the first shingle moves.</h2>
-              <p className="t-body-lg">Complex roofs and valuable homes deserve more than a crew and a dumpster. We plan access, protect landscaping and exteriors, and leave the site clean.</p>
+              <p className="t-body-lg">Distinctive homes deserve careful preparation as well as quality roofing. We plan access, protect landscaping and exteriors, and leave the site clean.</p>
               <ul className={s.checklist}>
                 {["Landscaping, siding, and grounds protection", "Careful staging and daily cleanup", "Magnetic nail sweep at closeout", "Clear communication from start to finish"].map((li) => (
                   <li key={li}><Check size={18} aria-hidden="true" /> <span className="t-body">{li}</span></li>

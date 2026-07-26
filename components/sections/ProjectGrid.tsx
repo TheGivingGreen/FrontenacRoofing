@@ -21,7 +21,7 @@ export function ProjectGrid() {
         <header className={styles.head}>
           <span className="eyebrow t-label">Recent work</span>
           <h2 id="grid-title" className="t-display-md">
-            Proof, not promises.
+            A look at our work.
           </h2>
         </header>
 

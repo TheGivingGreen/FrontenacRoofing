@@ -14,13 +14,12 @@ export function CommercialFeature() {
           <div className={styles.featureCopy}>
             <span className="eyebrow t-label">Commercial Roofing</span>
             <h2 id="commercial-title" className="t-display-md">
-              Roofing decisions backed by documentation.
+              Commercial roofing built around the property.
             </h2>
             <p className="t-body-lg">
               From occupied hotels and multi-unit properties to flat-roof
-              replacement and restoration, {""}
-              Frontenac approaches commercial work through assessment, planning,
-              communication, and closeout.
+              replacement, restoration, and coating systems, Frontenac brings
+              experienced planning and communication to every phase of the work.
             </p>
             <div className={styles.systemRail}>
               <span>Assessment</span>
@@ -29,7 +28,7 @@ export function CommercialFeature() {
               <span>TPO + Single-Ply</span>
             </div>
             <Button href="/commercial-roofing" variant="primary-dark">
-              Discuss a Commercial Project
+              View Commercial Roofing
             </Button>
           </div>
           <div>
