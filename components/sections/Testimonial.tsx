@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { asset } from "@/lib/asset";
 import styles from "./home.module.css";
 
 /**
@@ -14,11 +16,18 @@ export function Testimonial() {
           In their words
         </span>
         <figure className={styles.testimonial}>
+          <Image
+            src={asset("/images/testimonial-five-stars.png")}
+            width={204}
+            height={34}
+            alt="Five stars"
+            className={styles.testimonialStars}
+          />
           <blockquote className={styles.testimonialQuote}>
-            &ldquo;We had zero complaints from the tenants at the building,
-            which was a miracle. The communication level was excellent. We
-            always felt that any requests or questions were handled timely and
-            efficiently.&rdquo;
+            &ldquo;We had zero complaints from the tenants at the building
+            (which was a miracle &ndash; like they weren&apos;t even there).
+            The communication level was excellent. We always felt that any
+            requests or questions were handled timely and efficiently.&rdquo;
           </blockquote>
           <figcaption className={`t-label ${styles.testimonialAttr}`}>
             <strong>Charles Kipp</strong>

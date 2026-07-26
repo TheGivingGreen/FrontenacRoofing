@@ -213,6 +213,12 @@
 
 /* ---------- 11. Testimonial ---------- */
 .testimonial { max-width: 900px; }
+.testimonialStars {
+  display: block;
+  width: 153px;
+  height: auto;
+  margin: var(--space-4) 0 var(--space-5);
+}
 .testimonialQuote {
   font-family: var(--font-display);
   font-weight: 650;

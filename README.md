@@ -64,7 +64,9 @@ explicit `ImageSlot` with a declared aspect ratio — no invented photography.
 - **Credentials** — BBB A+, GAF, Owens Corning, James Hardie badge usage
 - **Featured project + project grid** — validate case studies and get publication
   permission before using any client/property name
-- **Testimonial** — confirm source, wording, and permission
+- **Testimonials** — three legacy testimonials are carried forward with their
+  original published wording; replace or supplement them as current third-party
+  review sources are confirmed
 - **Service territory** — confirm before publishing a city list
 - **Renovation** — confirm current scope before promoting (shown conditional)
 - **Solar / financing** — omitted pending business + legal verification
