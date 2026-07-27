@@ -31,8 +31,8 @@ export default function ScheduleInspectionPage() {
               Start with a clear assessment.
             </h1>
             <p className="t-lead" style={{ marginBottom: "var(--space-7)" }}>
-              Tell us what is happening at your property and we will help
-              determine the appropriate next conversation. Prefer to talk now?
+              Tell us about your property and we'll recommend
+              the right next step. Prefer to talk now?
               Call{" "}
               <a href={`tel:${site.phoneHref}`} className="textlink">
                 {site.phone}

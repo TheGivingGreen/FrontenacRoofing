@@ -38,8 +38,8 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="Services"
         crumbs={[{ label: "Home", href: "/" }, { label: "Services" }]}
-        title={<>Services organized around the property.</>}
-        lead="Whether you manage a commercial portfolio or care for a single distinctive home, the right work starts with an honest assessment."
+        title={<>All our services — for commercial and residential properties.</>}
+        lead="Whether you manage a commercial property or own a home, we start the same way — with an honest look at what the roof or exterior actually needs."
       />
 
       {GROUPS.map((g, gi) => (

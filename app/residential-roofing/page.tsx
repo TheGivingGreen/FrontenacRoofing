@@ -65,7 +65,7 @@ export default function ResidentialRoofingPage() {
             <div>
               <span className="eyebrow t-label eyebrow--brass">Property protection</span>
               <h2 id="rprotect-title" className="t-display-md">Your property is protected before the first shingle moves.</h2>
-              <p className="t-body-lg">Distinctive homes deserve careful preparation as well as quality roofing. We plan access, protect landscaping and exteriors, and leave the site clean.</p>
+              <p className="t-body-lg">A distinctive home calls for careful preparation before a single shingle comes off. We plan access, protect landscaping and exteriors, and leave the site clean.</p>
               <ul className={s.checklist}>
                 {["Landscaping, siding, and grounds protection", "Careful staging and daily cleanup", "Magnetic nail sweep at closeout", "Clear communication from start to finish"].map((li) => (
                   <li key={li}><Check size={18} aria-hidden="true" /> <span className="t-body">{li}</span></li>

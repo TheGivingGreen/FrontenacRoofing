@@ -29,13 +29,13 @@ export function Hero() {
             Commercial + Residential Roofing
           </span>
           <h1 id="hero-title" className={`t-display-hero ${styles.heroTitle}`}>
-            <span>The quality</span>
-            <span>your property deserves.</span>
+            <span>Your property.</span>
+            <span>Our accountability.</span>
           </h1>
           <p className={`t-lead ${styles.heroLead}`}>
-            {site.name} brings {site.teamExperienceYears} years of combined
-            roofing and construction experience to commercial properties and
-            distinctive homes.
+            Frontenac has completed more than 900 roofing projects across Greater
+            St. Louis — commercial buildings, occupied hotels, and distinctive
+            homes. We show up, we document the work, and we communicate throughout.
           </p>
           <div className={styles.heroActions}>
             <Button href="/schedule-inspection" variant="primary-dark">

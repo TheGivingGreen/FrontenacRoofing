@@ -41,11 +41,11 @@ export const metadata: Metadata = {
   creator: site.name,
   publisher: site.name,
   title: {
-    default: `${site.name} — The quality your property deserves.`,
+    default: `${site.name} — St. Louis roofing, done right.`,
     template: `%s — ${site.shortName}`,
   },
   description:
-    "Quality commercial and residential roofing backed by 20 years of combined experience and over 900 completed projects in the St. Louis region.",
+    "Frontenac Roofing & Construction — 20 years of combined experience, 900+ completed projects, and a reputation for communication. Commercial and residential roofing across Greater St. Louis.",
   manifest: isStagingBuild
     ? "/FrontenacRoofing/manifest.webmanifest"
     : "/manifest.webmanifest",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${site.name}`,
     description:
-      "Quality roofing and exterior construction for commercial properties and distinctive homes in the St. Louis region.",
+      "Commercial and residential roofing, restoration, and exterior construction across Greater St. Louis. Honest assessments. Real results.",
     url: "./",
     siteName: site.name,
     locale: "en_US",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: site.name,
     description:
-      "Quality roofing and exterior construction for commercial properties and distinctive homes in the St. Louis region.",
+      "Commercial and residential roofing, restoration, and exterior construction across Greater St. Louis. Honest assessments. Real results.",
     images: [absoluteUrl("/images/home-hero.webp")],
   },
   robots: isStagingBuild

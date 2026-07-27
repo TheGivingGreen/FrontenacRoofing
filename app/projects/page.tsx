@@ -20,8 +20,8 @@ export default function ProjectsPage() {
       <PageHero
         eyebrow="Projects"
         crumbs={[{ label: "Home", href: "/" }, { label: "Projects" }]}
-        title={<>Completed work, documented.</>}
-        lead="Our project library is the central proof of what Frontenac does — commercial and residential roofing, restoration, and specialty systems."
+        title={<>The work, in the field.</>}
+        lead="Browse completed commercial and residential roofing, restoration, and specialty projects across the region."
       />
 
       <section className="section section--compact surface-paper" aria-label="Project library">
@@ -69,7 +69,7 @@ export default function ProjectsPage() {
 
       <CTABand
         headline="Have a project like these?"
-        body="Tell us about your property and we’ll help determine the right next conversation."
+        body="Tell us about your property and we’ll help recommend where to start."
       />
     </PageShell>
   );

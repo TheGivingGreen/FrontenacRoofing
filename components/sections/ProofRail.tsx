@@ -28,9 +28,9 @@ export function ProofRail() {
 
           <div className={styles.proofCell}>
             <div className={styles.proofValue} style={{ fontSize: 28 }}>
-              St. Louis region
+              Est. 2018
             </div>
-            <div className={`t-label ${styles.proofLabel}`}>Commercial + residential service</div>
+            <div className={`t-label ${styles.proofLabel}`}>Serving Greater St. Louis since</div>
           </div>
 
           <div className={styles.proofCell}>

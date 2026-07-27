@@ -37,7 +37,7 @@ export default function ReviewsPage() {
         eyebrow="Reviews"
         crumbs={[{ label: "Home", href: "/" }, { label: "Reviews" }]}
         title={<>In our clients’ words.</>}
-        lead="Our clients speak to what matters most: communication, responsiveness, and respect for the property. These are their words, not ours."
+        lead="These testimonials are carried forward from Frontenac’s original website. Their words speak to communication, responsiveness, difficult work, and respect for occupied properties."
       />
 
       <section className="section section--compact surface-white" aria-label="Reviews">

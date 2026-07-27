@@ -36,7 +36,7 @@ export default function CommercialRoofingPage() {
         eyebrow="Commercial Roofing"
         crumbs={[{ label: "Home", href: "/" }, { label: "Commercial" }]}
         title={<>Commercial roofing built around the property.</>}
-        lead="From occupied hotels and multi-unit properties to flat-roof replacement, restoration, and coating systems, Frontenac brings experienced planning and communication to every phase of the work."
+        lead="From occupied hotels and multi-unit buildings to flat-roof replacement, restoration, and coating systems — every project starts with a plan and ends with documentation."
         image={{ ratio: "3-2", label: "Commercial flat-roof project", src: "/images/commercial-hero.webp" }}
         actions={
           <>
@@ -51,7 +51,7 @@ export default function CommercialRoofingPage() {
         <div className="container container--editorial">
           <header className={s.sectionHead}>
             <span className="eyebrow t-label">What we handle</span>
-            <h2 id="systems-title" className="t-display-md">Systems and scopes.</h2>
+            <h2 id="systems-title" className="t-display-md">What we handle on commercial properties.</h2>
           </header>
           <div className={`${s.cards} ${s["cards--2"]}`}>
             {SYSTEMS.map((c) => (
@@ -136,7 +136,7 @@ export default function CommercialRoofingPage() {
         <div className="container container--editorial">
           <header className={s.sectionHead}>
             <span className="eyebrow t-label">Recent commercial work</span>
-            <h2 id="cwork-title" className="t-display-md">A look at our commercial work.</h2>
+            <h2 id="cwork-title" className="t-display-md">Commercial work from the field.</h2>
           </header>
           <div className={`${s.imageCards} ${s["imageCards--3"]}`}>
             {recoveredProjects.filter((p) => p.location === "Newark, OH").map((p) => (

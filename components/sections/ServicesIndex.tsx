@@ -50,7 +50,7 @@ export function ServicesIndex() {
         <header className={styles.head}>
           <span className="eyebrow t-label">What we do</span>
           <h2 id="services-title" className="t-display-lg">
-            Roofing and exterior services.
+            The full picture of what we do.
           </h2>
         </header>
 

@@ -11,9 +11,9 @@ export function AudienceGateway() {
     <section className="section section--major surface-paper" aria-labelledby="gateway-title">
       <div className="container container--editorial">
         <header className={styles.head}>
-          <span className="eyebrow t-label">Commercial + Residential Expertise</span>
+          <span className="eyebrow t-label">Commercial · Residential</span>
           <h2 id="gateway-title" className="t-display-lg">
-            Experienced roofing for commercial properties and distinctive homes.
+            Two sides of the same company. One standard of work.
           </h2>
         </header>
 
@@ -25,7 +25,7 @@ export function AudienceGateway() {
               label="Commercial project — occupied / flat-roof property"
               className={styles.gatewayCommercialImage}
             />
-            <h3 className="t-title-lg">Commercial roofing in experienced hands.</h3>
+            <h3 className="t-title-lg">Commercial roofing with a plan behind every project.</h3>
             <p className="t-body-lg">
               Assessment, repair, replacement, restoration, and project communication
               for commercial, multi-unit, hotel, and occupied properties.
@@ -41,7 +41,7 @@ export function AudienceGateway() {
               src="/images/home-gateway-residential.webp"
               label="Residential — architecturally distinctive home"
             />
-            <h3 className="t-title-lg">Quality craftsmanship for distinctive homes.</h3>
+            <h3 className="t-title-lg">Roofing that respects the home it's protecting.</h3>
             <p className="t-body-lg">
               Roofing, storm response, specialty systems, siding, and exterior
               work completed with close attention to the home and surrounding property.

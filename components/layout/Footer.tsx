@@ -49,8 +49,8 @@ export function Footer() {
           <div className={styles.brandCol}>
             <Wordmark stacked onDark />
             <p className={`t-body ${styles.positioning}`}>
-              Quality roofing and exterior construction for commercial
-              properties and distinctive homes throughout the St. Louis region.
+              Commercial and residential roofing, restoration, and exterior
+              construction. Serving Greater St. Louis.
             </p>
           </div>
 

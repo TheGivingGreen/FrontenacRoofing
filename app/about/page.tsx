@@ -19,8 +19,8 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         crumbs={[{ label: "Home", href: "/" }, { label: "About" }]}
-        title={<>Quality roofing backed by experience.</>}
-        lead={`${site.name} is a St. Louis-region roofing and exterior construction company trusted with complex residential and commercial properties.`}
+        title={<>Experience you can trace. Communication you can count on.</>}
+        lead={`Frontenac is a St. Louis-area roofing and exterior construction company — established in 2018, with a team carrying 20 years of combined experience. We work on commercial buildings and distinctive homes, and we're known for communicating throughout every project.`}
         image={{ ratio: "3-2", label: "Frontenac crew or completed project", src: "/images/about-hero.webp" }}
       />
 
@@ -32,10 +32,10 @@ export default function AboutPage() {
             Built on communication and careful work.
           </h2>
           <p className="t-body-lg" style={{ marginBottom: "var(--space-4)" }}>
-            Frontenac provides residential and commercial roofing, exterior construction, roof restoration and coating, storm-damage support, siding, and specialty roofing systems across the greater St. Louis region.
+            Frontenac handles commercial and residential roofing, exterior construction, roof restoration and coating, storm-damage support, siding, and specialty systems across the greater St. Louis region. If it keeps a building or a home protected, we do it.
           </p>
           <p className="t-body-lg" style={{ marginBottom: "var(--space-4)", color: "var(--body)" }}>
-            The company was established in 2018. Our team brings {site.teamExperienceYears} years of combined roofing and construction experience to every property we work on.
+            Frontenac was established in 2018. Our team brings {site.teamExperienceYears} years of combined experience across commercial and residential roofing — and we put that experience to work on every project, regardless of size.
           </p>
           <p className="t-body-sm unverified" style={{ color: "var(--muted)", maxWidth: "68ch" }}>
             The full company story — how Frontenac began, leadership, and how we approach estimating, supervision, and closeout — publishes once ownership confirms these details (PROJECT_BRIEF §4, §17).

@@ -17,8 +17,8 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact"
         crumbs={[{ label: "Home", href: "/" }, { label: "Contact" }]}
-        title={<>Let’s find the right next conversation.</>}
-        lead="Commercial or residential, urgent or planned — tell us what’s happening at your property and we’ll point you to the right next step."
+        title={<>Get in touch.</>}
+        lead="Commercial or residential, urgent or planned — tell us what's happening at your property and we'll respond with the right path forward."
       />
 
       <section className="section section--compact surface-white" aria-label="Contact details and form">
@@ -54,24 +54,38 @@ export default function ContactPage() {
 
             {/* Form scaffold */}
             <div className={`${s.formNote} unverified`}>
-              <h2 className="t-title-lg" style={{ marginBottom: "var(--space-2)" }}>Request an inspection or consultation</h2>
+              <h2 className="t-title-lg" style={{ marginBottom: "var(--space-2)" }}>Request an Inspection or Consultation</h2>
               <p className="t-body-sm" style={{ color: "var(--muted)", marginBottom: "var(--space-2)" }}>
                 Form scaffold — not yet wired to a destination. Confirm inbox/CRM routing, success state, and response window before launch (PROJECT_BRIEF §9, §17).
               </p>
               <div className={s.fieldList}>
-                {[
-                  { l: "Name", full: false }, { l: "Phone", full: false },
-                  { l: "Email", full: true }, { l: "Property address", full: true },
-                  { l: "Customer type (commercial / residential)", full: false }, { l: "Service needed", full: false },
-                ].map((f) => (
-                  <div key={f.l} className={`${s.field} ${f.full ? "full" : ""}`}>
-                    <label>{f.l}</label>
-                    <div className="box">Placeholder</div>
-                  </div>
-                ))}
+                <div className={s.field}>
+                  <label>Name</label>
+                  <div className="box">Your name</div>
+                </div>
+                <div className={s.field}>
+                  <label>Phone</label>
+                  <div className="box">(314) 555-0000</div>
+                </div>
+                <div className={`${s.field} full`}>
+                  <label>Email</label>
+                  <div className="box">you@example.com</div>
+                </div>
+                <div className={`${s.field} full`}>
+                  <label>Property address</label>
+                  <div className="box">Street address, City, State</div>
+                </div>
+                <div className={s.field}>
+                  <label>Customer type (commercial / residential)</label>
+                  <div className="box">Commercial or residential?</div>
+                </div>
+                <div className={s.field}>
+                  <label>Service needed</label>
+                  <div className="box">What can we help with?</div>
+                </div>
                 <div className={`${s.field} full`}>
                   <label>Message</label>
-                  <div className="box area">Placeholder</div>
+                  <div className="box area">Tell us about your property and what you're dealing with.</div>
                 </div>
               </div>
               <div style={{ marginTop: "var(--space-5)" }}>
