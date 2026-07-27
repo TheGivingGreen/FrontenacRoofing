@@ -9,11 +9,12 @@ import { site } from "@/lib/site";
 import styles from "./Nav.module.css";
 
 const LINKS = [
+  { label: "About", href: "/about" },
   { label: "Commercial", href: "/commercial-roofing" },
   { label: "Residential", href: "/residential-roofing" },
   { label: "Services", href: "/services" },
   { label: "Projects", href: "/projects" },
-  { label: "About", href: "/about" },
+  { label: "Service Areas", href: "/service-areas" },
   { label: "Contact", href: "/contact" },
 ];
 
