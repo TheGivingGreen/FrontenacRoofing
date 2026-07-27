@@ -57,12 +57,12 @@ export function ImageSlot({
           }}
         />
       ) : null}
-      {!loaded ? (
+      {src && !loaded ? (
         <div className="image-slot__label" aria-hidden="true">
           <span className="image-slot__ratio">IMAGE · {ratio.replace("-", ":")}</span>
           <span className="image-slot__note">{label}</span>
           {note ? <span className="image-slot__note">{note}</span> : null}
-          {src ? <span className="image-slot__file">{src.replace("/images/", "")}</span> : null}
+          <span className="image-slot__file">{src.replace("/images/", "")}</span>
         </div>
       ) : null}
     </div>

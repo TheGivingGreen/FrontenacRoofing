@@ -103,14 +103,10 @@ export default function ServiceAreasPage() {
         </div>
       </section>
 
-      <section className="section section--compact surface-white">
-        <div className="container container--editorial" style={{ maxWidth: "66ch" }}>
-          <h2 className="t-title-lg">Don't see your town listed?</h2>
-          <p className="t-body">Our service area is always growing. If you're in or near the greater St. Louis region, there's a good chance we can help. Give us a call or request a free inspection — we'll let you know right away.</p>
-        </div>
-      </section>
-
-      <CTABand headline="Not sure if you're in our area?" body="Tell us your project location and we'll confirm coverage." />
+      <CTABand 
+        headline="Don't see your town listed?" 
+        body="Our service area is always growing. If you're in or near the greater St. Louis region, tell us your project location and we'll confirm coverage right away." 
+      />
     </PageShell>
   );
 }
