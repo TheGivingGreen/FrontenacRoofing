@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ServiceDetail } from "@/components/sections/ServiceDetail";
+import { serviceJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Specialty Roofing",
@@ -10,6 +11,19 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <ServiceDetail
+      structuredData={{
+        service: serviceJsonLd({
+          name: "Specialty Roofing",
+          description: "Tile, slate, metal, aluminum, wood shake, and DECRA roofing systems for architecturally distinctive homes — executed with care for complex geometry.",
+          url: "/residential-roofing/specialty-roofing",
+          serviceType: "Residential Roofing",
+        }),
+        breadcrumb: breadcrumbJsonLd([
+          { name: "Home", url: "/" },
+          { name: "Residential Roofing", url: "/residential-roofing" },
+          { name: "Specialty Roofing" },
+        ]),
+      }}
       eyebrow="Specialty Roofing"
       parent={{ label: "Residential", href: "/residential-roofing" }}
       title={<>Premium materials, complex geometry, clean execution.</>}

@@ -4,6 +4,7 @@ import { PageHero } from "@/components/sections/PageHero";
 import { CTABand } from "@/components/sections/CTABand";
 import { Button } from "@/components/ui/Button";
 import { ImageSlot } from "@/components/ui/ImageSlot";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { site } from "@/lib/site";
 import s from "@/components/sections/pages.module.css";
 
@@ -18,6 +19,10 @@ export type ServiceDetailProps = {
   cards: { heading: string; items: { t: string; d: string }[] };
   note?: string;
   cta?: { headline?: string; body?: string; label?: string; href?: string };
+  structuredData?: {
+    service?: Record<string, unknown>;
+    breadcrumb?: Record<string, unknown>;
+  };
 };
 
 /**
@@ -28,6 +33,8 @@ export type ServiceDetailProps = {
 export function ServiceDetail(p: ServiceDetailProps) {
   return (
     <PageShell>
+      {p.structuredData?.service && <JsonLd data={p.structuredData.service} />}
+      {p.structuredData?.breadcrumb && <JsonLd data={p.structuredData.breadcrumb} />}
       <PageHero
         eyebrow={p.eyebrow}
         crumbs={[{ label: "Home", href: "/" }, { label: p.parent.label, href: p.parent.href }, { label: p.eyebrow }]}

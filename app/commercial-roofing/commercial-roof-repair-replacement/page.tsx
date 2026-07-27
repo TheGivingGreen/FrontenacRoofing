@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ServiceDetail } from "@/components/sections/ServiceDetail";
+import { serviceJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Commercial Roof Repair & Replacement",
@@ -10,6 +11,19 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <ServiceDetail
+      structuredData={{
+        service: serviceJsonLd({
+          name: "Commercial Roof Repair & Replacement",
+          description: "Flat-roof and low-slope commercial roof repair and full replacement matched to the building, the budget, and the roof's remaining life.",
+          url: "/commercial-roofing/commercial-roof-repair-replacement",
+          serviceType: "Commercial Roofing",
+        }),
+        breadcrumb: breadcrumbJsonLd([
+          { name: "Home", url: "/" },
+          { name: "Commercial Roofing", url: "/commercial-roofing" },
+          { name: "Commercial Roof Repair & Replacement" },
+        ]),
+      }}
       eyebrow="Repair + Replacement"
       parent={{ label: "Commercial", href: "/commercial-roofing" }}
       title={<>Repair when it makes sense. Replace when it doesn’t.</>}

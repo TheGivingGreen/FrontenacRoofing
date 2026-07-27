@@ -43,6 +43,17 @@ export const organizationJsonLd = {
     "@type": "PostalAddress",
     ...site.address,
   },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 38.6053,
+    longitude: -90.4184,
+  },
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "09:00",
+    closes: "18:00",
+  },
   description:
     "Residential and commercial roofing, roof restoration, siding, and exterior construction serving the Greater St. Louis region.",
   areaServed: {
@@ -87,3 +98,37 @@ export const websiteJsonLd = {
   inLanguage: "en-US",
   publisher: { "@id": `${productionOrigin}/#organization` },
 };
+
+export function serviceJsonLd(params: {
+  name: string;
+  description: string;
+  url: string;
+  serviceType?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: params.name,
+    description: params.description,
+    url: absoluteUrl(params.url),
+    serviceType: params.serviceType,
+    provider: { "@id": `${productionOrigin}/#organization` },
+    areaServed: {
+      "@type": "AdministrativeArea",
+      name: site.region,
+    },
+  };
+}
+
+export function breadcrumbJsonLd(items: { name: string; url?: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, idx) => ({
+      "@type": "ListItem",
+      position: idx + 1,
+      name: item.name,
+      ...(item.url ? { item: absoluteUrl(item.url) } : {}),
+    })),
+  };
+}
