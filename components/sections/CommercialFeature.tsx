@@ -17,9 +17,9 @@ export function CommercialFeature() {
               Commercial roofing built around the property.
             </h2>
             <p className="t-body-lg">
-              From occupied hotels and multi-unit properties to flat-roof
-              replacement, restoration, and coating systems, Frontenac brings
-              experienced planning and communication to every phase of the work.
+              From occupied hotels and multi-unit buildings to flat-roof replacement, 
+              restoration, and coating systems — every project starts with a plan and 
+              ends with documentation.
             </p>
             <div className={styles.systemRail}>
               <span>Assessment</span>

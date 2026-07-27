@@ -18,7 +18,7 @@ export default function Page() {
       primaryCta={{ label: "Request a Siding Consultation", href: "/schedule-inspection" }}
       intro={{
         eyebrow: "What we do",
-        title: "Installation, replacement, and storm repair.",
+        title: "New systems, targeted repair, and storm damage — handled the same way we handle roofing.",
         body: "From full siding replacement to storm-damage repair, we help you choose products that fit the home’s appearance, energy performance, and budget.",
         bullets: [
           "Siding installation and full replacement",
@@ -38,7 +38,7 @@ export default function Page() {
         ],
       }}
       note="Manufacturer relationships and installer credentials (including James Hardie) are stated here only once current status and approved terminology are confirmed (PROJECT_BRIEF §10)."
-      cta={{ headline: "Considering new siding?", body: "Tell us about the home and we’ll walk you through the options.", label: "Request a Siding Consultation" }}
+      cta={{ headline: "New siding? We'll walk you through the options.", body: "Tell us about the home and we’ll walk you through the options.", label: "Request a Siding Consultation" }}
     />
   );
 }

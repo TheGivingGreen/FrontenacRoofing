@@ -12,7 +12,7 @@ export default function Page() {
     <ServiceDetail
       eyebrow="TPO + Single-Ply"
       parent={{ label: "Commercial", href: "/commercial-roofing" }}
-      title={<>Single-ply systems for flat commercial roofs.</>}
+      title={<>Flat roof. Right system. Right details.</>}
       lead="TPO and other single-ply membranes are a durable, cost-effective choice for many flat and low-slope commercial roofs. The performance is in the detailing as much as the membrane."
       heroImage="/images/tpo-hero.webp"
       primaryCta={{ label: "Discuss a Commercial Project", href: "/schedule-inspection" }}

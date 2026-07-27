@@ -18,11 +18,11 @@ export function FinalCTA() {
       <div className="container container--editorial">
         <div className={styles.finalCtaInner}>
           <h2 id="cta-title" className="t-display-lg">
-            Put your project in experienced hands.
+            Start with a conversation — we'll handle the rest.
           </h2>
           <p className="t-lead">
-            Tell us what is happening at your property. Our team will help
-            determine the appropriate next step and prepare a plan for the work.
+            Tell us about your property. We'll recommend the right approach and 
+            put together a clear plan.
           </p>
           <div className={styles.finalCtaActions}>
             <Button href="/schedule-inspection" variant="primary-dark">

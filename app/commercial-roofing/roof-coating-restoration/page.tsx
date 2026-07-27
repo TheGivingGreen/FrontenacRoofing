@@ -15,7 +15,7 @@ export default function Page() {
       title={<>Extend the roof you have — when it qualifies.</>}
       lead="A restoration coating can add years of service life and reflectivity to a sound commercial roof without a full tear-off. The key word is qualifies: not every roof is a candidate."
       heroImage="/images/coating-hero.webp"
-      primaryCta={{ label: "Ask if coating fits your roof", href: "/schedule-inspection" }}
+      primaryCta={{ label: "Ask If Your Roof Qualifies", href: "/schedule-inspection" }}
       intro={{
         eyebrow: "Is your roof a candidate?",
         title: "Honest candidacy comes before any coating.",
@@ -30,7 +30,7 @@ export default function Page() {
         imageLeft: false,
       }}
       cards={{
-        heading: "What restoration can offer",
+        heading: "What restoration delivers",
         items: [
           { t: "Extended service life", d: "Added years for a sound roof, deferring the cost of full replacement." },
           { t: "Reflective surface", d: "Cool-roof coatings that can reduce rooftop heat load." },

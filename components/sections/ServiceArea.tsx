@@ -15,12 +15,11 @@ export function ServiceArea() {
           <div>
             <span className="eyebrow t-label">Where we work</span>
             <h2 id="area-title" className="t-display-md">
-              Serving commercial and residential properties across the St. Louis region.
+              Based in St. Louis. Working across the region.
             </h2>
             <p className="t-body-lg">
-              {site.name} serves property owners throughout the greater St.
-              Louis area. Contact our team to confirm availability for your
-              project and location.
+              {site.name} serves property owners across the greater St. Louis metro — Missouri and Illinois. 
+              Visit our service areas page for the full county and city list, or just call and we'll confirm coverage right away.
             </p>
           </div>
           <ImageSlot

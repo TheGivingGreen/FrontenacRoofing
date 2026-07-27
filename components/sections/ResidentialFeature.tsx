@@ -25,7 +25,7 @@ export function ResidentialFeature() {
               Craftsmanship worthy of the home.
             </h2>
             <p className="t-body-lg">
-              Frontenac provides roof replacement, repair, storm-damage response,
+              Frontenac handles roof replacement, repair, storm-damage response,
               and specialty roofing for homes that require careful material
               selection, clean execution, and respect for the property.
             </p>

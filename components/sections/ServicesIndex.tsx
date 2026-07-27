@@ -28,7 +28,7 @@ const SUPPORTING = [
   {
     label: "Specialty Roofing",
     title: "Tile, slate, metal, wood shake, and DECRA.",
-    copy: "Specialized materials and experienced installation for distinctive roof systems.",
+    copy: "Specialized materials and skilled installation for distinctive roof systems.",
     href: "/residential-roofing/specialty-roofing",
     ratio: "4-3" as const,
     img: "/images/home-services-specialty.webp",

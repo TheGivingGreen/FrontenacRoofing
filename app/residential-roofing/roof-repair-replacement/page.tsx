@@ -12,7 +12,7 @@ export default function Page() {
     <ServiceDetail
       eyebrow="Repair + Replacement"
       parent={{ label: "Residential", href: "/residential-roofing" }}
-      title={<>Repair, replacement, and everything in between.</>}
+      title={<>We'll tell you what the roof needs — not what we'd prefer to sell.</>}
       lead="From a single leak to a full replacement, we assess the roof honestly and recommend the work your home actually needs."
       heroImage="/images/res-repair-hero.webp"
       intro={{
